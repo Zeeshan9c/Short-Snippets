@@ -1,0 +1,26 @@
+var tagDropdown = document.getElementById("tag-dropdown");
+var heading = document.getElementById("heading");
+
+tagDropdown.addEventListener("change", function () {
+  var newTag = document.createElement(tagDropdown.value);
+  newTag.innerHTML = heading.innerHTML;
+  heading.parentNode.replaceChild(newTag, heading);
+  heading = newTag;
+});
+
+
+<!-- DropDown Change tag depend on option selected -->
+<h3 class="mb-20 fw-bold">1. Changing element tag by selecting from dropdown</h3>
+<div class="tag-change">
+    <select id="tag-dropdown" class="tag-dropdown">
+      <option value="h1">Heading 1</option>
+      <option value="h2" selected>Heading 2</option>
+      <option value="h3">Heading 3</option>
+      <option value="h4">Heading 4</option>
+      <option value="h5">Heading 5</option>
+      <option value="h6">Heading 6</option>
+      <option value="p">Paragraph</option>
+      <option value="div">div</option>
+    </select>
+<h2 id="heading">Example Heading</h2>
+</div>
