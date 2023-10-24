@@ -1,0 +1,106 @@
+<div class="event_detail_slider_wrapper">
+    <div class="swiper event_detail_slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slider_image_wrapper">
+                    <img src="https://livingdesert23.wpengine.com/wp-content/uploads/2023/09/visit-plan.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider_image_wrapper">
+                    <img src="https://livingdesert23.wpengine.com/wp-content/uploads/2023/09/event.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider_image_wrapper">
+                    <img src="https://livingdesert23.wpengine.com/wp-content/uploads/2023/09/wildlife.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="slider_controlls">
+            <div class="events_slide_prev"></div>
+            <div class="events_slide_next"></div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .event_detail_slider_wrapper .event_detail_slider {
+        overflow: hidden;
+    }
+    .event_detail_slider_wrapper .event_detail_slider:not(.swiper-container-initialized) .slider_controlls {
+        display: none;
+    }
+    .event_detail_slider_wrapper .event_detail_slider .swiper-wrapper {
+        overflow: visible !important;
+        position: relative;
+    }
+    .event_detail_slider_wrapper .event_detail_slider .swiper-slide .slider_image_wrapper {
+        position: relative;
+        padding-bottom: 60%;
+    }
+    .event_detail_slider_wrapper .event_detail_slider .swiper-slide .slider_image_wrapper img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .event_detail_slider_wrapper .slider_controlls {
+        position: absolute;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        z-index: 2;
+    }
+    .event_detail_slider_wrapper .slider_controlls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 50px;
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        top: auto;
+        gap: 20px;
+    }
+    .event_detail_slider_wrapper .slider_controlls .events_slide_prev,
+    .event_detail_slider_wrapper .slider_controlls .events_slide_next {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: .3s all;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px;
+        cursor: pointer;
+    }
+    .event_detail_slider_wrapper .slider_controlls .events_slide_prev:hover,
+    .event_detail_slider_wrapper .slider_controlls .events_slide_next:hover {
+        opacity: .7;
+    }
+    .event_detail_slider_wrapper .slider_controlls .events_slide_next {
+        background-image: url('../img/arrow-next.svg');
+    }
+    .event_detail_slider_wrapper .slider_controlls .events_slide_prev {
+        background-image: url('../img/arrow-prev.svg');
+    }
+</style>
+
+<script>
+    $(document).ready(function() {
+		let event_detail_slider;
+		if ($('.event_detail_slider_wrapper .event_detail_slider .swiper-slide').length > 1) {
+			event_detail_slider = new Swiper('.event_detail_slider', {
+				slidesPerView: 1,
+				loop: true,
+				grabCursor: true,
+				navigation: {
+					nextEl: ".events_slide_next",
+					prevEl: ".events_slide_prev",
+				},
+			});
+		}
+	});
+</script>
