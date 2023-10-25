@@ -1,3 +1,5 @@
+let cs_swiper;
+
 $(window).on("load resize ", function () {
     if (window.matchMedia("(max-width: 767px)").matches) {
         $('.mobile-tab-title').removeClass('active');
