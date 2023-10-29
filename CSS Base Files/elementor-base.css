@@ -1,0 +1,1240 @@
+/*
+Table of Contents
+1. Generic ----------------------------------------
+01. Fonts -------------------------------------
+02. Base --------------------------------------
+03. Helpers -----------------------------------
+2. Page Sections ----------------------------------
+01. Wrapper -----------------------------------
+02. Header ------------------------------------
+03. Main Content ------------------------------
+04. Footer ------------------------------------
+*/
+
+/* ==========================================================================
+I. Generic
+========================================================================== */
+
+/* ------------------------------------------------------------
+Fonts
+------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------
+Base
+------------------------------------------------------------ */
+
+html {
+	color: #000000;
+	font-size: 10px;
+	line-height: 1.5;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+::-ms-clear {
+	display: none;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input,
+select,
+input[type="search"] {
+	-webkit-appearance: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+textarea {
+resize: vertical;
+}
+
+img {
+	max-width: 100%;
+}
+
+.elementor-widget-image .elementor-image>a img[src$=".svg"], 
+.elementor-widget-image .elementor-image figure>a img[src$=".svg"]{
+	width: auto !important;
+}
+
+.elementor-widget-image a img[src$=".svg"] {
+    width: auto !important;
+}
+
+body p,
+.elementor-widget-container,
+.elementor-image-box-description {
+	font-size: inherit;
+	font-family: inherit;
+	line-height: inherit;
+	color: inherit;
+	font-weight: inherit;
+}
+
+.elementor-text-editor p {
+	font-size: inherit;
+	font-family: inherit;
+	color: inherit;
+	line-height: inherit;
+	font-weight: inherit;
+	text-transform: inherit;
+}
+
+.elementor a,
+a {
+	font-family: inherit;
+	font-weight: inherit;
+	text-decoration: underline;
+	color: #0F732B;
+	font-size: inherit;
+	transition: all 0.3s;
+}
+
+.elementor p a {
+	font-weight: 700;
+}
+
+.elementor a:hover,
+a:hover {
+	text-decoration: none;
+	color: #0F732B;
+}
+
+body a,
+body p a {
+	color: #0F732B;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+body a,
+body p a:hover {
+	color: #0F732B;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+/* / =----------------------------UL/OL---------------------------- / */
+
+.site-main ul:not([class]) {
+	font-size: inherit;
+	list-style: none;
+}
+
+.site-main ol {
+	list-style: decimal outside;
+	font-size: inherit;
+	padding-left: 18px;
+}
+
+body .site-main ul:not([class]) li,
+body .site-main ul:not([class]) li ol li ul:not([class]) li {
+	font-size: inherit;
+	line-height: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	margin-bottom: 14px;
+	padding-left: 23px;
+	position: relative;
+}
+
+.site-main ol li,
+.site-main ul:not([class]) li ol li {
+	font-size: inherit;
+	line-height: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	margin-bottom: 14px;
+	padding-left: 10px;
+	position: relative;
+}
+
+.site-main ol ol,
+.site-main ul:not([class]) ul:not([class]),
+.site-main ol ul:not([class]),
+.site-main ul:not([class]) ol {
+	margin-bottom: 0;
+	margin-left: 0px;
+	margin-top: 14px;
+	margin-bottom: 14px;
+}
+
+.site-main ul:not([class]):not(.elementor-editor-element-settings):not(.elementor-select-preset-list):not(.gform_fields) {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.site-main ul:not([class]):not(.elementor-editor-element-settings):not(.elementor-select-preset-list):not(.gform_fields):not(.camps_and_programs) li:before,
+.site-main ul:not([class]) li ol li ul:not([class]) li:after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 9px;
+	width: 14px;
+    height: 14px;
+	background: url(../img/bullet-icon.svg) center center no-repeat;
+	background-size: contain;
+}
+
+.site-main ol li::marker{
+    font-weight: 700;
+    color: #002568;
+}
+
+.site-main ul:not([class]) ol li::before {
+	display: none !important;
+}
+
+/* / =----------------------------UL/OL---------------------------- / */
+
+h1[class],
+h2[class],
+h3[class],
+h4[class],
+h5[class],
+h6[class],
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+table:last-child,
+blockquote:last-child {
+	margin-bottom: 0;	
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-family: 'Lato', Arial, Helvetica, sans-serif;
+	line-height: 30px;
+	color: #203141;
+}
+
+body .elementor-widget-heading h1.elementor-heading-title,
+body h1,
+body .h1, 
+body .elementor-widget-heading.h1 .elementor-heading-title, 
+h1.elementor-cta__title.elementor-cta__content-item {
+	font-size: 54px;
+	font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
+	font-weight: 700;
+	line-height: 1.20370;
+}
+
+body .elementor-widget-heading h2.elementor-heading-title,
+body h2,
+body .h2, 
+body .elementor-widget-heading.h2 .elementor-heading-title, 
+h2.elementor-cta__title.elementor-cta__content-item,
+body .elementor-image-box-content h2.elementor-image-box-title,
+.elementor-posts .elementor-post__card h2.elementor-post__title,
+.elementor-posts h2.elementor-post__title {
+	font-size: 44px;
+	font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
+	font-weight: 700;
+	line-height: 1.31818;
+}
+
+body .elementor-widget-heading h3.elementor-heading-title,
+body h3,
+body .h3, 
+body .elementor-widget-heading.h3 .elementor-heading-title, 
+h3.elementor-cta__title.elementor-cta__content-item,
+body .elementor-image-box-content h3.elementor-image-box-title,
+.elementor-posts .elementor-post__card h3.elementor-post__title,
+.elementor-posts h3.elementor-post__title{
+	font-size: 36px;
+	font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
+	font-weight: 700;
+	line-height: 1.33333;
+}
+
+body .elementor-widget-heading h4.elementor-heading-title,
+body h4,
+body .h4, 
+body .elementor-widget-heading.h4 .elementor-heading-title, 
+h4.elementor-cta__title.elementor-cta__content-item,
+body .elementor-image-box-content h4.elementor-image-box-title,
+.elementor-posts .elementor-post__card h4.elementor-post__title,
+.elementor-posts h4.elementor-post__title {
+	font-size: 28px;
+	font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
+	font-weight: 700;
+	line-height: 1.4285;
+}
+
+body .elementor-widget-heading h5.elementor-heading-title,
+body h5,
+body .h5, 
+body .elementor-widget-heading.h5 .elementor-heading-title, 
+h5.elementor-cta__title.elementor-cta__content-item,
+body .elementor-image-box-content h5.elementor-image-box-title,
+.elementor-posts .elementor-post__card h5.elementor-post__title,
+.elementor-posts h5.elementor-post__title {
+	font-size: 24px;
+	font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+body .elementor-widget-heading h6.elementor-heading-title,
+body h6,
+body .h6, 
+body .elementor-widget-heading.h6 .elementor-heading-title, 
+h6.elementor-cta__title.elementor-cta__content-item,
+body .elementor-image-box-content h6.elementor-image-box-title,
+.elementor-posts .elementor-post__card h6.elementor-post__title,
+.elementor-posts h6.elementor-post__title {
+	font-size: 20px;
+	font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
+	font-weight: 600;
+	line-height: 1.6;
+}
+
+body .elementor-widget-heading.display-1 .elementor-heading-title, 
+body .display-1 .elementor-heading-title, 
+body .display-1 .elementor-widget-heading .elementor-heading-title, 
+.display-1 .elementor-cta__title.elementor-cta__content-item, 
+body .elementor-widget-heading .elementor-heading-title.elementor-size-large, 
+body .elementor-heading-title.elementor-size-large  {
+	font-size: 18px;
+	font-family: 'Lato', Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	line-height: 1.66667;
+}
+
+
+/* ------------------------------------------------------------
+Helpers
+------------------------------------------------------------ */
+
+.invisible {
+visibility: hidden !important;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance: none;
+}
+
+
+/* / ----------------------Button style---------------------- / */
+
+body .elementor-widget-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button [type="submit"]:not(.adminbar-button),
+body .elementor-button,
+body .elementor-widget-button .elementor-button,
+body .elementor-widget-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button button:not(.gm-control-active):focus,
+body .elementor-widget-button button:not(.gm-control-active),
+body .elementor-widget-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-button .elementor-cta--skin-classic .elementor-cta__button.elementor-button{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    border: 2px solid #344A83;
+    background-color: transparent;
+    color: #344A83;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    transition: all 0.3s;
+    transition-delay: -0.1s;
+    padding: 18px 30px 18px 30px;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    max-width: 100%;
+    text-decoration: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    /* position: relative; */
+    overflow: hidden;
+    vertical-align: top;
+    letter-spacing: 0;
+    word-spacing: 0;
+}
+
+.elementor-button:after,
+	[type="button"]:after {
+	content: "";
+	width: 206px;
+	display: block;
+	max-width: 100%;
+}
+
+
+body .elementor-widget-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button .elementor-button:hover,
+body .elementor-button:hover,
+body .elementor-widget-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button button:not(.gm-control-active):hover,
+body .elementor-widget-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-button .elementor-cta--skin-classic .elementor-cta__button.elementor-button:hover{
+	background-color: #344a83;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+body .elementor-widget-button .green-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button .green-button [type="submit"]:not(.adminbar-button),
+body .green-button .elementor-button,
+body .elementor-widget-button .green-button .elementor-button,
+body .elementor-widget-button .green-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button .green-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button .green-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button .green-button button:not(.gm-control-active):focus,
+body .elementor-widget-button .green-button button:not(.gm-control-active),
+body .elementor-widget-button .green-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button .green-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-button .green-button .elementor-cta--skin-classic .elementor-cta__button.elementor-button{
+	background-color: transparent;
+    color: #62BE7C;
+	border: 2px solid #62BE7C;
+}
+
+body .elementor-widget-button .green-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button .green-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button .green-button .elementor-button:hover,
+body .green-button .elementor-button:hover,
+body .elementor-widget-button .green-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button .green-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button .green-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button .green-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button .green-button button:not(.gm-control-active):hover,
+body .elementor-widget-button .green-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button .green-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-button .green-button .elementor-cta--skin-classic .elementor-cta__button.elementor-button:hover{
+	background-color: #62BE7C;
+    color: #203141;
+	border: 2px solid #62BE7C;
+}
+
+
+/* / ----------------------Button style---------------------- / */
+
+
+/* .elementor-container{
+max-width: 1241px;
+padding-left: 30px;
+padding-right: 30px;
+} */
+
+/* .elementor-section.elementor-section-boxed > .elementor-container {
+width: calc(100% - 30px);
+} */
+
+.elementor-section.elementor-section-boxed > .elementor-container
+.elementor-container {
+  width: 100%;
+}
+/* ------------------------------------------------------------
+Select Dropdown Custom Style
+------------------------------------------------------------ */
+/* gravity form select dropdowns */
+
+.ginput_container_select .select{
+	position: relative;
+}
+.ginput_container_select .select select,
+.gfield .clear-multi .ginput_container_date .select select,
+.gfield .gfield_time_ampm .select select,
+body select:not([class*="ui-datepicker"]) {
+	width: 100%;
+	display: block;
+	height: 58px;
+	cursor: pointer;
+	position: relative;
+	/* border: 1px solid #666; */
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+    border: solid 2px #e3e8ef;
+    padding-left: 16px;
+    padding-right: 16px;
+	background: url(../img/chevron-down.svg) no-repeat center right 18px;
+    background-size: 18px;
+	padding: 12px 40px 12px 16px !important;
+}
+
+body .gform_wrapper li.gfield_error .clear-multi .ginput_container_date .select {
+	border-color: #e75454;
+}
+
+.s-hidden {
+	display: none !important;
+}
+
+.styledSelect {
+    padding: 12px 40px 12px 16px;
+    position: relative;
+    height: 58px;
+    z-index: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    border-radius: 10px !important;
+    background-color: #ffffff;
+    border: solid 2px #e3e8ef;
+    box-shadow: none;
+    font-size: 18px !important;
+    line-height: 30px;
+    color: #203141 !important;
+    text-transform: none;
+    letter-spacing: 0px;
+    transition: all 0.3s;
+}
+.styledSelect:focus{
+  border: 1px solid #a65d43;
+}
+
+body .gform_wrapper .gfield_required {
+	color: #F43939;
+	margin-left: 0;
+}
+
+body .gform_wrapper .gfield_time_ampm select {
+	width: 80px !important;
+	padding-bottom: 17px !important;
+	padding-top: 17px !important;
+}
+
+/* .styledSelect.active {
+  box-shadow: 0 5px 12px rgba(0, 0, 0, .15);
+} */
+
+.styledSelect:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 17px;
+    line-height: 1;
+    width: 18px;
+    height: 12px;
+    background: url(../img/chevron-down.svg) no-repeat center;
+    background-size: contain;
+}
+
+.styledSelect.active:after {
+	background: url("../img/chevron-down.svg") no-repeat center;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+body .options {
+	display: none;
+    position: absolute;
+    top: calc(100% + 2px);
+    right: 0;
+    left: 0;
+    z-index: 9;
+    margin: 0 !important;
+    padding: 17px 12px;
+    list-style: none;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    max-height: 220px;
+    overflow-y: auto;
+    border: solid 2px #ffffff;
+    box-shadow: 0 4px 20px rgb(101 117 167 / 25%);
+}
+
+body form .options li {
+	margin: 0;
+    padding: 7px 15px 7px;
+    font-size: 16px;
+    /* border-top: 1px solid #ededed; */
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #58595B;
+    text-transform: none;
+    /* height: 40px; */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body form .options li:hover {
+	background-color: #E3E9FB;
+    color: #00153A;
+}
+
+.options li::before {
+	display: none !important;
+}
+
+.options li[rel=""] {
+	display: none;
+}
+
+.options li.active {
+	background-color: #E3E9FB;
+    color: #00153A;
+	position: relative;
+	cursor: default;
+	pointer-events: none;
+}
+
+.styledSelect.noplaceholder .text-ellipses {
+	color: #0C2340;
+}
+/* ------------------------------------------------------------
+End of Select Dropdown Custom Style
+------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------
+Checkbox custom style
+------------------------------------------------------------ */
+
+/* html structure */
+/* <label class="checkbox-container">One
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label> */
+/* end html structure */
+
+/* Create a custom checkbox */
+.checkbox-container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.checkbox-container .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input~.checkmark {
+	background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked~.checkmark {
+	background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-container .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked~.checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+	left: 11px;
+	top: 6px;
+	width: 5px;
+	height: 12px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/* ------------------------------------------------------------
+End of checkbox custom style
+------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+Checkbox custom style
+------------------------------------------------------------ */
+/* html structure */
+/* <label class="radio-container">One
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label> */
+
+/* The container */
+.radio-container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radio-container .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input~.checkmark {
+	background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked~.checkmark {
+	background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-container .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked~.checkmark:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+	top: 7px;
+	left: 7.5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* ------------------------------------------------------------
+End of checkbox custom style
+------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+gravity form style
+------------------------------------------------------------ */
+html body .gform_wrapper *:focus {
+	outline: none;
+}
+
+html body .gform_wrapper div.validation_error html body .gform_wrapper form {
+	border: 2px solid #666;
+	padding: 0;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield {
+	margin-top: 0;
+	margin-bottom: 15px !important;
+	border: 0;
+	background: none;
+	vertical-align: top;
+	letter-spacing: 0px;
+	padding: 0;
+}
+
+.gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half):not(.half-field):not(.full-field) {
+	max-width: 100% !important;
+	width: 100%;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield.bottom-info {
+	padding-top: 0px !important;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield .ginput_container {
+	margin-top: 0 !important;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="text"],
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="email"],
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="number"],
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="tel"] {
+	margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 10px !important;
+    background-color: #ffffff;
+    border: solid 2px #E3E8EF;
+    box-shadow: none;
+    font-size: 18px !important;
+    line-height: 30px !important;
+    color: #203141 !important;
+    width: 100% !important;
+    height: 58px;
+    padding: 7px 16px !important;
+    transition: all 0.3s;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="text"]::-webkit-input-placeholder,
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="email"]::-webkit-input-placeholder,
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="number"]::-webkit-input-placeholder,
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="tel"]::-webkit-input-placeholder, 
+html body .gform_wrapper form ul.gform_fields li.gfield textarea::-webkit-input-placeholder {
+	color: rgba(32, 49, 65, 0.7) !important;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="text"]:focus,
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="email"]:focus,
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="number"]:focus,
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="tel"]:focus, 
+html body .gform_wrapper form ul.gform_fields li.gfield textarea:focus {
+	border: solid 2px #002568;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield textarea {
+	margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 10px !important;
+    background-color: #ffffff;
+    border: solid 2px #E3E8EF;
+    box-shadow: none;
+    font-size: 18px !important;
+    line-height: 30px !important;
+    color: #203141 !important;
+    width: 100% !important;
+    padding: 7px 16px !important;
+    transition: all 0.3s;
+	height: 175px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+	-webkit-text-fill-color: #666666 !important;
+}
+
+/* html body .gform_wrapper input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+	padding: 16px 15px;
+	font-size: 18px;
+	line-height: 1;
+} */
+
+html body .gform_wrapper form ul.gform_fields li.gfield.gfield_error:not(.top-text):not(.recaptcha-field) {
+	margin-bottom: 15px !important;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield.recaptcha-field {
+	padding-top: 10px !important;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield .ginput_container.ginput_recaptcha {
+	margin-top: 0 !important;
+}
+
+html body .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description, 
+html body .gform_wrapper .validation_message {
+	font-size: 16px;
+    color: #F43939;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    padding-top: 4px;
+    line-height: normal;
+    line-height: 26px;
+    letter-spacing: -0.13px;
+    padding-right: 0;
+}
+
+/* html body .gform_wrapper div.validation_error {
+	border: 0;
+	font-size: 20px;
+	color: #f02525;
+	display: none;
+} */
+
+html body .gform_wrapper li.gfield_error input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+html body .gform_wrapper .gform_wrapper li.gfield_error textarea {
+	border: 2px solid #F43939 !important;
+}
+
+.gfield_error .styledSelect {
+	border-color: #F43939;
+}
+
+html body .gform_wrapper .top_label .gfield_label,
+html body .gform_wrapper .gform_wrapper legend.gfield_label {
+	font-size: 18px;
+    line-height: 30px;
+    color: #203141;
+	font-weight: 400;
+	margin-bottom: 12px;
+	margin-top: 0;
+}
+
+
+/* -------------------------------------------------------
+Radio and Checkbox Styling
+---------------------------------------------------------- */
+
+html body .gform_wrapper ul.gfield_checkbox li input[type="checkbox"]:checked+label,
+html body .gform_wrapper .gfield_radio li input[type="radio"]:checked+label {
+	font-weight: normal;
+}
+
+html body .gform_wrapper ul.gform_fields li.gfield.gfield_error+li.gfield.gfield_error {
+	margin-top: 0;
+}
+
+html body .gform_wrapper li.gfield_error div.ginput_complex.ginput_container label,
+html body .gform_wrapper li.gfield_error ul.gfield_checkbox,
+html body .gform_wrapper li.gfield_error ul.gfield_radio {
+	color: #000;
+}
+
+html body .gform_wrapper ul.gfield_radio li {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+html body .gform_wrapper ul.gfield_radio li:before {
+	display: none !important;
+}
+
+html body .gform_wrapper ul.gfield_radio li input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+html body .gform_wrapper ul.gfield_radio li label {
+	color: #203141;
+	padding-left: 35px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+html body .gform_wrapper ul.gfield_radio li label:before {
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    border: 2px solid #203141;
+}
+
+html body .gform_wrapper ul.gfield_radio li input~label:hover:before {
+	background-color: rgb(32 49 65 / 15%);
+}
+
+html body .gform_wrapper ul.gfield_radio li:hover input~label {
+	font-weight: normal;
+}
+
+html body .gform_wrapper ul.gfield_radio li input:checked~label:before {
+	background-color: #203141;
+}
+
+html body .gform_wrapper ul.gfield_radio li label:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+html body .gform_wrapper ul.gfield_radio li input:checked~label:after {
+	display: block;
+}
+
+html body .gform_wrapper ul.gfield_radio li label:after {
+	top: 13px;
+	left: 7px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #fff;
+}
+
+html body .gform_wrapper ul.gfield_checkbox li {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+html body .gform_wrapper ul.gfield_checkbox li:before {
+	display: none !important;
+}
+
+html body .gform_wrapper ul.gfield_checkbox li input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+html body .gform_wrapper ul.gfield_checkbox li label {
+	color: #203141;
+	padding-left: 35px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+html body .gform_wrapper ul.gfield_checkbox li label:before {
+	content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    border: 2px solid #203141;
+    border-radius: 5px;
+}
+
+html body .gform_wrapper ul.gfield_checkbox li input~label:hover:before {
+	background-color: rgb(32 49 65 / 15%);
+}
+
+html body .gform_wrapper ul.gfield_checkbox li:hover input~label {
+	font-weight: normal;
+}
+
+html body .gform_wrapper ul.gfield_checkbox li input:checked~label:before {
+	background-color: #203141;
+}
+
+html body .gform_wrapper ul.gfield_checkbox li label:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+html body .gform_wrapper ul.gfield_checkbox li input:checked~label:after {
+	display: block;
+}
+
+html body .gform_wrapper ul.gfield_checkbox li label:after {
+	left: 8px;
+    top: 7px;
+    width: 8px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.elementor .gm-style img {
+	max-width: none;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield.combo-name-fields {
+	margin-bottom: 0 !important;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield.combo-name-fields input {
+	margin-bottom: 20px !important;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield.combo-name-fields .ginput_container>span {
+	margin-bottom: 0;
+	padding-top: 0;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield.combo-name-fields .validation_message {
+	margin-top: -20px;
+	margin-bottom: 20px;
+}
+
+.ginput_container_checkbox + .validation_message, 
+.ginput_container_radio + .validation_message {
+    display: none;
+}
+html body .gform_wrapper .gfield_error .gfield_radio label, 
+html body .gform_wrapper .gfield_error .gfield_checkbox label{
+    color: #F43939;
+}
+
+html body .gform_wrapper .gfield_error .gfield_radio label:before, 
+html body .gform_wrapper .gfield_error .gfield_checkbox label:before{
+    border-color: #F43939;
+}
+
+.ginput_container_phone .validation_message{
+    display: none;
+}
+
+html body .gform_wrapper .gform_validation_errors{
+    display: none;
+}
+
+.gform_confirmation_wrapper{
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #e4eaf1;
+	padding: 20px;
+}
+
+.gform_confirmation_message{
+    font-size: 22px;
+    font-weight: 700;
+    max-width: 380px;
+}
+
+/* ------------------------------------------------------------
+gravity form Button styling
+------------------------------------------------------------ */
+
+html body .gform_wrapper form .gform_footer {
+	text-align: left;
+	padding: 10px 0 0;
+	margin: 0;
+}
+
+html body .gform_wrapper form .gform_footer input[type="submit"] {
+    max-width: 270px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    border: 2px solid #344A83;
+    background-color: transparent;
+    color: #344A83;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    transition: all 0.3s;
+    transition-delay: -0.1s;
+    padding: 18px 30px 18px 30px;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    /* position: relative; */
+    overflow: hidden;
+    vertical-align: top;
+    letter-spacing: 0;
+    word-spacing: 0;
+    width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+html body .gform_wrapper form .gform_footer input[type="submit"]:hover {
+	background-color: #344a83;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+body .gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half){
+	max-width: 100% !important;
+}
+html body .gform_wrapper form .gform_footer input[type="submit"] + img{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -30px);
+}
+
+body .gform_wrapper.gform_validation_error .top_label li.gfield.gfield_error.gf_left_half, 
+body .gform_wrapper.gform_validation_error .top_label li.gfield.gfield_error.gf_right_half{
+	max-width: 50%;
+	margin-right: 0 !important;
+}
+/* ------------------------------------------------------------
+End gravity form style
+------------------------------------------------------------ */

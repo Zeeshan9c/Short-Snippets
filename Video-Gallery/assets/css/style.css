@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.gallery-wrapper {
+	background-color: #6193E6;
+    padding: 80px 15px;
+}
+
+.gallery-wrapper .container {
+	display: flex;
+	background-color: #ffffff;
+	padding: 15px;
+	max-height: 450px;
+}
+
+.gallery-wrapper .container video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	cursor: pointer;
+}
+
+.gallery-wrapper .container .videos-list {
+	width: 20%;
+	box-sizing: content-box;
+	transition: 0.3s all;
+	max-height: 450px;
+	overflow: hidden;
+	overflow-Y: scroll;
+}
+
+.gallery-wrapper .container .videos-list video {
+	transition: 0.1s all;
+	max-height: 100px;
+    width: 99%;
+}
+
+.gallery-wrapper .container .videos-list video.active {
+    border: 3px solid #6893E4;
+}
+
+.gallery-wrapper .container .video-player {
+	width: 80%;
+	padding-left: 20px;
+}
+
+.gallery-wrapper .container .video-player video {
+	object-fit: cover;
+}
+
+.gallery-wrapper .container .videos-list video:hover {
+	transform: scale(1.02);
+	border: 3px solid #6893E4;
+}
+
+/* Styling the scrool bar */
+.gallery-wrapper .container .videos-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.gallery-wrapper .container .videos-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.gallery-wrapper .container .videos-list::-webkit-scrollbar-thumb {
+    background: #6893E4;
+	border-radius: 10px;
+}
+
+.gallery-wrapper .container .videos-list::-webkit-scrollbar-thumb:hover {
+	background: #417ae6;
+}
+
+.gallery-wrapper .video-player {
+    display: inline-block;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.gallery-wrapper .video-player span {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    cursor: pointer;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transition: 0.3s all;
+}
+
+.gallery-wrapper .video-player svg {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+}
+
+.gallery-wrapper .video-player:hover {
+    text-decoration: underline;
+}
+
+.gallery-wrapper .container .video-player .embed-play:hover {
+    opacity: 0.7;
+}
+
+.gallery-wrapper .container .video-player .embed-play::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+	left: 50%;
+	top: 50%;
+	border-radius: 50%;
+}
+
+.gallery-wrapper .container .video-player:hover .embed-play::before {
+    animation: play-btn 1.5s ease-in-out infinite;
+    background: rgba(245, 245, 245, 0.3);
+}
+
+@keyframes play-btn {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.gallery-wrapper .video-player.show-video .embed-play.active {
+    display: none;
+}
+
+video::-webkit-media-controls {
+    visibility: hidden;
+}
+
+video::-webkit-media-controls-enclosure {
+    visibility: visible;
+}
+
+@media screen and (max-width: 767px) {
+
+    .gallery-wrapper .container {
+        flex-direction: column;
+        max-height: 100%;
+    }
+    
+    .gallery-wrapper .container .videos-list {
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: auto;
+        width: 100%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        height: 120px;
+        
+    }
+    
+    .gallery-wrapper .container .videos-list video:not(:last-child) {
+        margin-right: 10px;
+    }
+    
+    .gallery-wrapper .container .videos-list::-webkit-scrollbar {
+        width: 5px;
+        height: 8px;
+        margin-top: 20px;
+    }
+    
+    .gallery-wrapper .container .video-player {
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+        display: flex;
+    }
+    
+    .gallery-wrapper .container .video-player video {
+        min-height: 280px;
+    }
+}
