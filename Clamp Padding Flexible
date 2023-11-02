@@ -1,0 +1,7 @@
+70px indicates the max padding
+24px indicates the min padding 
+and the calc between need to adjust the exact value on specific viewport to set the padding
+e.g the below example shows the conatiner width is 1512px and padding right is 70px and then the screen size reduces the 70px padding reduces to the 24px. 
+
+
+padding-right: clamp(24px, calc(4.6vw + 1px), 70px);
