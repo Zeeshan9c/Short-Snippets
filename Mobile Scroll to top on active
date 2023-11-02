@@ -1,0 +1,11 @@
+$(".ac-tabs .e-n-tabs-heading button.e-n-tab-title").on('click', function () {
+		if (window.matchMedia("(max-width: 767px)").matches == true) {	
+			let headerHeight = $('.tld-mobile-header').height();
+			let closestParent = $(this);
+			setTimeout(function () {
+				$('html, body').animate({
+				scrollTop: $(closestParent).offset().top - headerHeight + 20
+				}, 500);
+			}, 500);
+		}
+	});
