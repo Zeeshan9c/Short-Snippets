@@ -1,0 +1,48 @@
+<script>
+// For Generating ul li for tabs buttons on top
+(function ($) {
+let tab_headingElements = $('.tab_block_heading');
+let tab_ulElement = $('.tabs_block > ul');
+tab_headingElements.each(function(index) {
+    // $(this).attr('id', 'h3_' + (index + 1));
+    let tab_liElement = $('<li class="scroll_links"></li>');
+    let tab_aElement = $('<button></button>');
+
+    tab_aElement.text($(this).text());
+    tab_liElement.append(tab_aElement);
+    tab_ulElement.append(tab_liElement);
+});
+
+// ul li tabs genrated functionality to show hide hotspot sections
+$(".tabs_content_wrapper").each(function(index) {
+  var tabId = "tab" + (index + 1);
+  $(this).attr("data-tab", tabId).attr("id", tabId);
+});
+  $(".tabs_content_wrapper:not(:first)").hide();
+  $("li.scroll_links:first button").addClass("active");
+  $("li.scroll_links button").click(function() {
+  var tabIndex = $(this).closest("li").index() + 1;
+  var tabId = "tab" + tabIndex;
+  $(".tabs_content_wrapper").hide();
+  $("#" + tabId).show();
+  $("li.scroll_links button").removeClass("active");
+  $(this).addClass("active");
+});
+
+// Inner products shown on click the hotspot
+$('.product_block_wrap').hide();
+$('.product_block_wrap.active').show();
+$('.hotspot__button').click(function(event) {
+  event.preventDefault(); 
+  var tabs_content_wrapper = $(this).closest('.tabs_content_wrapper');
+  var index = tabs_content_wrapper.find('.hotspot__button').index(this);
+  tabs_content_wrapper.find('.product_block_wrap').hide();
+  tabs_content_wrapper.find('.product_block_wrap').eq(index).show();
+});
+
+// if (typeof Shopify !== 'undefined' && Shopify.designMode) {
+//   $('.tabs_content_wrapper').css('display', 'flex');
+// }
+}(jQuery))
+
+</script>
