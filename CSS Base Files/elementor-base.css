@@ -19,6 +19,24 @@ I. Generic
 Fonts
 ------------------------------------------------------------ */
 
+/*
+font-family: 'Lato', sans-serif;
+*/
+
+/* ------------------------------------------------------------
+Color Variables
+------------------------------------------------------------ */
+
+/* var( --e-global-color-5c882e4 ) */
+/* var( --e-global-color-e716d02 ) */
+/* var( --e-global-color-4381ffe ) */
+/* var( --e-global-color-05c8ee3 ) */
+/* var( --e-global-color-a2780db ) */
+/* var( --e-global-color-e225803 ) */
+/* var( --e-global-color-20f2d68 ) */
+/* var( --e-global-color-1b5cf53 ) */
+/* var( --e-global-color-a14030a ) */
+
 
 /* ------------------------------------------------------------
 Base
@@ -75,7 +93,7 @@ fieldset {
 }
 
 textarea {
-resize: vertical;
+	resize: vertical;
 }
 
 img {
@@ -86,7 +104,6 @@ img {
 .elementor-widget-image .elementor-image figure>a img[src$=".svg"]{
 	width: auto !important;
 }
-
 .elementor-widget-image a img[src$=".svg"] {
     width: auto !important;
 }
@@ -115,32 +132,33 @@ a {
 	font-family: inherit;
 	font-weight: inherit;
 	text-decoration: underline;
-	color: #0F732B;
+	color: var( --e-global-color-5c882e4 );
 	font-size: inherit;
 	transition: all 0.3s;
 }
 
 .elementor p a {
-	font-weight: 700;
+	font-weight: 500;
+	text-decoration: underline;
 }
 
 .elementor a:hover,
 a:hover {
 	text-decoration: none;
-	color: #0F732B;
+	color: var( --e-global-color-5c882e4 );
 }
+
 
 body a,
 body p a {
-	color: #0F732B;
-	font-weight: 700;
+	color: var( --e-global-color-5c882e4 );
 	text-decoration: underline;
+	font-weight: 500;
 }
 
 body a,
 body p a:hover {
-	color: #0F732B;
-	font-weight: 700;
+	color: var( --e-global-color-5c882e4 );
 	text-decoration: none;
 }
 
@@ -160,25 +178,25 @@ body p a:hover {
 body .site-main ul:not([class]) li,
 body .site-main ul:not([class]) li ol li ul:not([class]) li {
 	font-size: inherit;
-	line-height: inherit;
-	font-family: inherit;
-	font-weight: inherit;
-	color: inherit;
-	margin-bottom: 14px;
-	padding-left: 23px;
-	position: relative;
+    line-height: 1.43;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    margin-bottom: 9px;
+    padding-left: 24px;
+    position: relative;	
 }
 
 .site-main ol li,
 .site-main ul:not([class]) li ol li {
 	font-size: inherit;
-	line-height: inherit;
-	font-family: inherit;
-	font-weight: inherit;
-	color: inherit;
-	margin-bottom: 14px;
-	padding-left: 10px;
-	position: relative;
+    line-height: 1.43;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    margin-bottom: 9px;
+    padding-left: 4px;
+    position: relative;
 }
 
 .site-main ol ol,
@@ -187,8 +205,8 @@ body .site-main ul:not([class]) li ol li ul:not([class]) li {
 .site-main ul:not([class]) ol {
 	margin-bottom: 0;
 	margin-left: 0px;
-	margin-top: 14px;
-	margin-bottom: 14px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .site-main ul:not([class]):not(.elementor-editor-element-settings):not(.elementor-select-preset-list):not(.gform_fields) {
@@ -198,25 +216,28 @@ body .site-main ul:not([class]) li ol li ul:not([class]) li {
 
 .site-main ul:not([class]):not(.elementor-editor-element-settings):not(.elementor-select-preset-list):not(.gform_fields):not(.camps_and_programs) li:before,
 .site-main ul:not([class]) li ol li ul:not([class]) li:after {
-	content: "";
-	display: inline-block;
-	position: absolute;
-	left: 0;
-	top: 9px;
-	width: 14px;
-    height: 14px;
-	background: url(../img/bullet-icon.svg) center center no-repeat;
-	background-size: contain;
+    content: "";
+    display: inline-block;
+    background-color: #313536;
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
 }
 
-.site-main ol li::marker{
-    font-weight: 700;
-    color: #002568;
+.site-main ol li::marker, 
+.site-main ul:not([class]) li ol li::marker{
+    font-weight: 600;
+    color: #F68C1E;
 }
 
 .site-main ul:not([class]) ol li::before {
 	display: none !important;
 }
+
+
 
 /* / =----------------------------UL/OL---------------------------- / */
 
@@ -244,21 +265,34 @@ blockquote:last-child {
 body {
 	margin: 0;
 	padding: 0;
-	font-size: 18px;
-	font-family: 'Lato', Arial, Helvetica, sans-serif;
-	line-height: 30px;
-	color: #203141;
+	color: var( --e-global-color-4381ffe );
+	font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+	background-color: var( --e-global-color-1b5cf53 );
 }
+
+body p strong, 
+body .elementor-widget-text-editor strong{
+    font-weight: 900;
+    
+}
+
+.elementor-cta--skin-classic .elementor-cta__content-item{
+	color: var( --e-global-color-4381ffe );
+}
+
 
 body .elementor-widget-heading h1.elementor-heading-title,
 body h1,
 body .h1, 
 body .elementor-widget-heading.h1 .elementor-heading-title, 
 h1.elementor-cta__title.elementor-cta__content-item {
-	font-size: 54px;
-	font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
-	font-weight: 700;
-	line-height: 1.20370;
+	font-family: "Anton", Sans-serif;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.2;
 }
 
 body .elementor-widget-heading h2.elementor-heading-title,
@@ -269,10 +303,10 @@ h2.elementor-cta__title.elementor-cta__content-item,
 body .elementor-image-box-content h2.elementor-image-box-title,
 .elementor-posts .elementor-post__card h2.elementor-post__title,
 .elementor-posts h2.elementor-post__title {
-	font-size: 44px;
-	font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
-	font-weight: 700;
-	line-height: 1.31818;
+    font-family: "Anton", Sans-serif;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.2;
 }
 
 body .elementor-widget-heading h3.elementor-heading-title,
@@ -282,11 +316,11 @@ body .elementor-widget-heading.h3 .elementor-heading-title,
 h3.elementor-cta__title.elementor-cta__content-item,
 body .elementor-image-box-content h3.elementor-image-box-title,
 .elementor-posts .elementor-post__card h3.elementor-post__title,
-.elementor-posts h3.elementor-post__title{
-	font-size: 36px;
-	font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
-	font-weight: 700;
-	line-height: 1.33333;
+.elementor-posts h3.elementor-post__title {
+	font-family: "Barlow Condensed", Sans-serif;
+	font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 body .elementor-widget-heading h4.elementor-heading-title,
@@ -297,10 +331,10 @@ h4.elementor-cta__title.elementor-cta__content-item,
 body .elementor-image-box-content h4.elementor-image-box-title,
 .elementor-posts .elementor-post__card h4.elementor-post__title,
 .elementor-posts h4.elementor-post__title {
-	font-size: 28px;
-	font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
-	font-weight: 700;
-	line-height: 1.4285;
+	font-family: "Maven Pro", Sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 body .elementor-widget-heading h5.elementor-heading-title,
@@ -311,11 +345,12 @@ h5.elementor-cta__title.elementor-cta__content-item,
 body .elementor-image-box-content h5.elementor-image-box-title,
 .elementor-posts .elementor-post__card h5.elementor-post__title,
 .elementor-posts h5.elementor-post__title {
-	font-size: 24px;
-	font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
-	font-weight: 700;
-	line-height: 1.5;
+	font-family: "Maven Pro", Sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
 }
+
 
 body .elementor-widget-heading h6.elementor-heading-title,
 body h6,
@@ -325,32 +360,29 @@ h6.elementor-cta__title.elementor-cta__content-item,
 body .elementor-image-box-content h6.elementor-image-box-title,
 .elementor-posts .elementor-post__card h6.elementor-post__title,
 .elementor-posts h6.elementor-post__title {
-	font-size: 20px;
-	font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif;
-	font-weight: 600;
-	line-height: 1.6;
+	font-family: "Maven Pro", Sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
-body .elementor-widget-heading.display-1 .elementor-heading-title, 
-body .display-1 .elementor-heading-title, 
-body .display-1 .elementor-widget-heading .elementor-heading-title, 
-.display-1 .elementor-cta__title.elementor-cta__content-item, 
-body .elementor-widget-heading .elementor-heading-title.elementor-size-large, 
-body .elementor-heading-title.elementor-size-large  {
-	font-size: 18px;
-	font-family: 'Lato', Arial, Helvetica, sans-serif;
-	font-weight: 700;
-	line-height: 1.66667;
+body .lead-text.elementor-widget-text-editor, 
+body .lead-text.elementor-widget-text-editor p, 
+body .lead-text .elementor-widget-text-editor, 
+body .lead-text .elementor-widget-text-editor p{
+    font-size: 20px;
+    line-height: 32px;
+	line-height: 1.45;
 }
-
 
 /* ------------------------------------------------------------
 Helpers
 ------------------------------------------------------------ */
 
 .invisible {
-visibility: hidden !important;
+	visibility: hidden !important;
 }
+
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
@@ -358,8 +390,7 @@ input[type="search"]::-webkit-search-results-decoration {
 	-webkit-appearance: none;
 }
 
-
-/* / ----------------------Button style---------------------- / */
+/* / --------Button style------------ / */
 
 body .elementor-widget-button [type="button"]:not(.gm-control-active),
 body .elementor-widget-button [type="submit"]:not(.adminbar-button),
@@ -372,41 +403,34 @@ body .elementor-widget-button button:not(.gm-control-active):focus,
 body .elementor-widget-button button:not(.gm-control-active),
 body .elementor-widget-button .elementor-cta .elementor-cta__button.elementor-button,
 body .elementor-widget-button .elementor-kit-7 .elementor-button:focus,
-body .elementor-widget-button .elementor-cta--skin-classic .elementor-cta__button.elementor-button{
+body .elementor-widget-call-to-action .elementor-cta__button.elementor-button {
+	color: var( --e-global-color-1b5cf53 );
+    background-color: var( --e-global-color-5c882e4 );
+	font-size: 24px;
+    line-height: 30px;
+    padding: 12px 27px 12px;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 18px;
-    border: 2px solid #344A83;
-    background-color: transparent;
-    color: #344A83;
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
-    transition: all 0.3s;
-    transition-delay: -0.1s;
-    padding: 18px 30px 18px 30px;
-    -webkit-appearance: none;
-    box-sizing: border-box;
+    border: 3px solid var( --e-global-color-5c882e4 );
     display: inline-block;
+    text-decoration: none;
     cursor: pointer;
     text-align: center;
+    border-radius: 0;
+    -webkit-appearance: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    font-family: "Barlow Condensed", Sans-serif;
     max-width: 100%;
-    text-decoration: none;
-    border-radius: 10px;
-    text-transform: uppercase;
-    /* position: relative; */
-    overflow: hidden;
-    vertical-align: top;
-    letter-spacing: 0;
-    word-spacing: 0;
+	text-transform: capitalize;
 }
 
 .elementor-button:after,
-	[type="button"]:after {
+[type="button"]:after {
 	content: "";
-	width: 206px;
+	width: auto;
 	display: block;
 	max-width: 100%;
 }
-
 
 body .elementor-widget-button [type="button"]:not(.gm-control-active):hover,
 body .elementor-widget-button [type="submit"]:not(.adminbar-button):hover,
@@ -419,46 +443,541 @@ body .elementor-widget-button button:not(.gm-control-active):focus:hover,
 body .elementor-widget-button button:not(.gm-control-active):hover,
 body .elementor-widget-button .elementor-cta .elementor-cta__button.elementor-button:hover,
 body .elementor-widget-button .elementor-kit-7 .elementor-button:focus:hover,
-body .elementor-widget-button .elementor-cta--skin-classic .elementor-cta__button.elementor-button:hover{
-	background-color: #344a83;
-    color: #ffffff;
+body .elementor-widget-call-to-action .elementor-cta__button.elementor-button:hover {
+	background-color: var( --e-global-color-1b5cf53 );
+	color: var( --e-global-color-5c882e4 );
+	text-decoration: none;
+	border-color: var( --e-global-color-5c882e4 );
+}
+
+body .elementor-widget-button.reverse-green-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.reverse-green-button [type="submit"]:not(.adminbar-button),
+body .reverse-green-button .elementor-button,
+body .elementor-widget-button.reverse-green-button .elementor-button,
+body .elementor-widget-button.reverse-green-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button.reverse-green-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.reverse-green-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button.reverse-green-button button:not(.gm-control-active):focus,
+body .elementor-widget-button.reverse-green-button button:not(.gm-control-active),
+body .elementor-widget-button.reverse-green-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button.reverse-green-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-call-to-action.reverse-green-button .elementor-cta__button.elementor-button { 
+    background-color: var( --e-global-color-1b5cf53 );
+	color: var( --e-global-color-5c882e4 );
+	text-decoration: none;
+	border-color: var( --e-global-color-5c882e4 );
+}
+
+body .elementor-widget-button.reverse-green-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-green-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button.reverse-green-button .elementor-button:hover,
+body .reverse-green-button .elementor-button:hover,
+body .elementor-widget-button.reverse-green-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.reverse-green-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-green-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button.reverse-green-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.reverse-green-button button:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-green-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button.reverse-green-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-button.reverse-green-button .elementor-cta--skin-classic .elementor-cta__button .elementor-button:hover,
+body .reverse-green-button.elementor-cta--skin-classic .elementor-cta__button-wrapper .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-call-to-action.reverse-green-button .elementor-cta__button.elementor-button:hover {
+	background-color: var( --e-global-color-5c882e4 );
+	color: var( --e-global-color-1b5cf53 );
+	text-decoration: none;
+	border-color: var( --e-global-color-5c882e4 );
+}
+
+body .elementor-widget-button.orange-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.orange-button [type="submit"]:not(.adminbar-button),
+body .orange-button .elementor-button,
+body .elementor-widget-button.orange-button .elementor-button,
+body .elementor-widget-button.orange-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button.orange-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.orange-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button.orange-button button:not(.gm-control-active):focus,
+body .elementor-widget-button.orange-button button:not(.gm-control-active),
+body .elementor-widget-button.orange-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button.orange-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-call-to-action.orange-button .elementor-cta__button.elementor-button { 
+    color: var( --e-global-color-1b5cf53 );
+    background-color: var( --e-global-color-05c8ee3 );
+    border-color: var( --e-global-color-05c8ee3 );
+}
+
+body .elementor-widget-button.orange-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.orange-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button.orange-button .elementor-button:hover,
+body .orange-button .elementor-button:hover,
+body .elementor-widget-button.orange-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.orange-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.orange-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button.orange-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.orange-button button:not(.gm-control-active):hover,
+body .elementor-widget-button.orange-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button.orange-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-button.orange-button .elementor-cta--skin-classic .elementor-cta__button .elementor-button:hover,
+body .orange-button.elementor-cta--skin-classic .elementor-cta__button-wrapper .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-call-to-action.orange-button .elementor-cta__button.elementor-button:hover {
+	background-color: var( --e-global-color-1b5cf53 );
+    color: var( --e-global-color-05c8ee3 );
+	text-decoration: none;
+    border-color: var( --e-global-color-05c8ee3 );
+}
+
+body .elementor-widget-button.reverse-orange-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.reverse-orange-button [type="submit"]:not(.adminbar-button),
+body .reverse-orange-button .elementor-button,
+body .elementor-widget-button.reverse-orange-button .elementor-button,
+body .elementor-widget-button.reverse-orange-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button.reverse-orange-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.reverse-orange-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button.reverse-orange-button button:not(.gm-control-active):focus,
+body .elementor-widget-button.reverse-orange-button button:not(.gm-control-active),
+body .elementor-widget-button.reverse-orange-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button.reverse-orange-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-call-to-action.reverse-orange-button .elementor-cta__button.elementor-button { 
+	background-color: var( --e-global-color-1b5cf53 );
+    color: var( --e-global-color-05c8ee3 );
+    border-color: var( --e-global-color-05c8ee3 );
+}
+
+body .elementor-widget-button.reverse-orange-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-orange-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button.reverse-orange-button .elementor-button:hover,
+body .reverse-orange-button .elementor-button:hover,
+body .elementor-widget-button.reverse-orange-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.reverse-orange-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-orange-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button.reverse-orange-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.reverse-orange-button button:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-orange-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button.reverse-orange-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-button.reverse-orange-button .elementor-cta--skin-classic .elementor-cta__button .elementor-button:hover,
+body .reverse-orange-button.elementor-cta--skin-classic .elementor-cta__button-wrapper .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-call-to-action.reverse-orange-button .elementor-cta__button.elementor-button:hover {
+	color: var( --e-global-color-1b5cf53 );
+    background-color: var( --e-global-color-05c8ee3 );
+    border-color: var( --e-global-color-05c8ee3 );
+	text-decoration: none;
+}
+
+body .elementor-widget-button.light-green-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.light-green-button [type="submit"]:not(.adminbar-button),
+body .light-green-button .elementor-button,
+body .elementor-widget-button.light-green-button .elementor-button,
+body .elementor-widget-button.light-green-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button.light-green-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.light-green-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button.light-green-button button:not(.gm-control-active):focus,
+body .elementor-widget-button.light-green-button button:not(.gm-control-active),
+body .elementor-widget-button.light-green-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button.light-green-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-call-to-action.light-green-button .elementor-cta__button.elementor-button {
+    color: var( --e-global-color-1b5cf53 );
+    background-color: var( --e-global-color-a2780db );
+    border-color: var( --e-global-color-a2780db );
+}
+
+body .elementor-widget-button.light-green-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.light-green-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button.light-green-button .elementor-button:hover,
+body .light-green-button .elementor-button:hover,
+body .elementor-widget-button.light-green-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.light-green-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.light-green-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button.light-green-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.light-green-button button:not(.gm-control-active):hover,
+body .elementor-widget-button.light-green-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button.light-green-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-call-to-action.light-green-button .elementor-cta__button.elementor-button:hover {
+	background-color: var( --e-global-color-1b5cf53 );
+    color: var( --e-global-color-a2780db );
+	text-decoration: none;
+    border-color: var( --e-global-color-a2780db );
+}
+
+body .elementor-widget-button.reverse-light-green-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.reverse-light-green-button [type="submit"]:not(.adminbar-button),
+body .reverse-light-green-button .elementor-button,
+body .elementor-widget-button.reverse-light-green-button .elementor-button,
+body .elementor-widget-button.reverse-light-green-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button.reverse-light-green-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.reverse-light-green-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button.reverse-light-green-button button:not(.gm-control-active):focus,
+body .elementor-widget-button.reverse-light-green-button button:not(.gm-control-active),
+body .elementor-widget-button.reverse-light-green-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button.reverse-light-green-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-call-to-action.reverse-light-green-button .elementor-cta__button.elementor-button {
+	background-color: var( --e-global-color-1b5cf53 );
+    color: var( --e-global-color-a2780db );
+    border-color: var( --e-global-color-a2780db );
+}
+
+body .elementor-widget-button.reverse-light-green-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-light-green-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button.reverse-light-green-button .elementor-button:hover,
+body .reverse-light-green-button .elementor-button:hover,
+body .elementor-widget-button.reverse-light-green-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.reverse-light-green-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-light-green-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button.reverse-light-green-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.reverse-light-green-button button:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-light-green-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button.reverse-light-green-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-call-to-action.reverse-light-green-button .elementor-cta__button.elementor-button:hover {
+	color: var( --e-global-color-1b5cf53 );
+    background-color: var( --e-global-color-a2780db );
+    border-color: var( --e-global-color-a2780db );
+	text-decoration: none;
+}
+
+body .elementor-widget-button.light-purple-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.light-purple-button [type="submit"]:not(.adminbar-button),
+body .light-purple-button .elementor-button,
+body .elementor-widget-button.light-purple-button .elementor-button,
+body .elementor-widget-button.light-purple-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button.light-purple-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.light-purple-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button.light-purple-button button:not(.gm-control-active):focus,
+body .elementor-widget-button.light-purple-button button:not(.gm-control-active),
+body .elementor-widget-button.light-purple-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button.light-purple-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-call-to-action.light-purple-button .elementor-cta__button.elementor-button {
+    color: var( --e-global-color-1b5cf53 );
+    background-color: var( --e-global-color-e225803 );
+    border-color: var( --e-global-color-e225803 );
+}
+
+body .elementor-widget-button.light-purple-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.light-purple-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button.light-purple-button .elementor-button:hover,
+body .light-purple-button .elementor-button:hover,
+body .elementor-widget-button.light-purple-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.light-purple-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.light-purple-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button.light-purple-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.light-purple-button button:not(.gm-control-active):hover,
+body .elementor-widget-button.light-purple-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button.light-purple-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-call-to-action.light-purple-button .elementor-cta__button.elementor-button:hover {
+	background-color: var( --e-global-color-1b5cf53 );
+    color: var( --e-global-color-e225803 );
+	text-decoration: none;
+    border-color: var( --e-global-color-e225803 );
+}
+
+body .elementor-widget-button.reverse-light-purple-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.reverse-light-purple-button [type="submit"]:not(.adminbar-button),
+body .reverse-light-purple-button .elementor-button,
+body .elementor-widget-button.reverse-light-purple-button .elementor-button,
+body .elementor-widget-button.reverse-light-purple-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button.reverse-light-purple-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.reverse-light-purple-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button.reverse-light-purple-button button:not(.gm-control-active):focus,
+body .elementor-widget-button.reverse-light-purple-button button:not(.gm-control-active),
+body .elementor-widget-button.reverse-light-purple-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button.reverse-light-purple-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-call-to-action.reverse-light-purple-button .elementor-cta__button.elementor-button {
+	background-color: var( --e-global-color-1b5cf53 );
+    color: var( --e-global-color-e225803 );
+    border-color: var( --e-global-color-e225803 );
+}
+
+body .elementor-widget-button.reverse-light-purple-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-light-purple-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button.reverse-light-purple-button .elementor-button:hover,
+body .reverse-light-purple-button .elementor-button:hover,
+body .elementor-widget-button.reverse-light-purple-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.reverse-light-purple-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-light-purple-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button.reverse-light-purple-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.reverse-light-purple-button button:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-light-purple-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button.reverse-light-purple-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-call-to-action.reverse-light-purple-button .elementor-cta__button.elementor-button:hover {
+	color: var( --e-global-color-1b5cf53 );
+    background-color: var( --e-global-color-e225803 );
+    border-color: var( --e-global-color-e225803 );
+	text-decoration: none;
+
+}
+
+body .elementor-widget-button.dark-green-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.dark-green-button [type="submit"]:not(.adminbar-button),
+body .dark-green-button .elementor-button,
+body .elementor-widget-button.dark-green-button .elementor-button,
+body .elementor-widget-button.dark-green-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button.dark-green-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.dark-green-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button.dark-green-button button:not(.gm-control-active):focus,
+body .elementor-widget-button.dark-green-button button:not(.gm-control-active),
+body .elementor-widget-button.dark-green-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button.dark-green-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-call-to-action.dark-green-button .elementor-cta__button.elementor-button {
+    color: var( --e-global-color-1b5cf53 );
+    background-color: var( --e-global-color-e716d02 );
+    border-color: var( --e-global-color-e716d02 );
+}
+
+body .elementor-widget-button.dark-green-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.dark-green-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button.dark-green-button .elementor-button:hover,
+body .dark-green-button .elementor-button:hover,
+body .elementor-widget-button.dark-green-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.dark-green-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.dark-green-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button.dark-green-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.dark-green-button button:not(.gm-control-active):hover,
+body .elementor-widget-button.dark-green-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button.dark-green-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-call-to-action.dark-green-button .elementor-cta__button.elementor-button:hover {
+	background-color: var( --e-global-color-1b5cf53 );
+    color: var( --e-global-color-e716d02 );
+	text-decoration: none;
+    border-color: var( --e-global-color-e716d02 );
+}
+
+body .elementor-widget-button.reverse-dark-green-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.reverse-dark-green-button [type="submit"]:not(.adminbar-button),
+body .reverse-dark-green-button .elementor-button,
+body .elementor-widget-button.reverse-dark-green-button .elementor-button,
+body .elementor-widget-button.reverse-dark-green-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button.reverse-dark-green-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.reverse-dark-green-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button.reverse-dark-green-button button:not(.gm-control-active):focus,
+body .elementor-widget-button.reverse-dark-green-button button:not(.gm-control-active),
+body .elementor-widget-button.reverse-dark-green-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button.reverse-dark-green-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-call-to-action.reverse-dark-green-button .elementor-cta__button.elementor-button {
+	background-color: var( --e-global-color-1b5cf53 );
+    color: var( --e-global-color-e716d02 );
+    border-color: var( --e-global-color-e716d02 );
+}
+
+body .elementor-widget-button.reverse-dark-green-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-dark-green-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button.reverse-dark-green-button .elementor-button:hover,
+body .reverse-dark-green-button .elementor-button:hover,
+body .elementor-widget-button.reverse-dark-green-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.reverse-dark-green-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-dark-green-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button.reverse-dark-green-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.reverse-dark-green-button button:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-dark-green-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button.reverse-dark-green-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-call-to-action.reverse-dark-green-button .elementor-cta__button.elementor-button:hover {
+	color: var( --e-global-color-1b5cf53 );
+    background-color: var( --e-global-color-e716d02 );
+    border-color: var( --e-global-color-e716d02 );
+	text-decoration: none;
+}
+
+body .elementor-widget-button.icon-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.icon-button [type="submit"]:not(.adminbar-button),
+body .icon-button .elementor-button,
+body .elementor-widget-button.icon-button .elementor-button,
+body .elementor-widget-button.icon-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button.icon-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.icon-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button.icon-button button:not(.gm-control-active):focus,
+body .elementor-widget-button.icon-button button:not(.gm-control-active),
+body .elementor-widget-button.icon-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button.icon-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-call-to-action.icon-button .elementor-cta__button.elementor-button {
+	color: var( --e-global-color-1b5cf53 );
+    background-color: var( --e-global-color-5c882e4 );
+    font-size: 31px;
+    line-height: 1;
+    padding: 6px 4px 6px 7.89px;
+    font-weight: 700;
+    border: 3px solid var( --e-global-color-5c882e4 );
+    display: inline-block;
     text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 100px;
+    -webkit-appearance: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    font-family: "Barlow Condensed", Sans-serif;
+    max-width: 100%;
 }
 
-body .elementor-widget-button .green-button [type="button"]:not(.gm-control-active),
-body .elementor-widget-button .green-button [type="submit"]:not(.adminbar-button),
-body .green-button .elementor-button,
-body .elementor-widget-button .green-button .elementor-button,
-body .elementor-widget-button .green-button [type="button"]:not(.gm-control-active):focus,
-body .elementor-widget-button .green-button [type="button"]:not(.gm-control-active),
-body .elementor-widget-button .green-button [type="submit"]:not(.adminbar-button):focus,
-body .elementor-widget-button .green-button button:not(.gm-control-active):focus,
-body .elementor-widget-button .green-button button:not(.gm-control-active),
-body .elementor-widget-button .green-button .elementor-cta .elementor-cta__button.elementor-button,
-body .elementor-widget-button .green-button .elementor-kit-7 .elementor-button:focus,
-body .elementor-widget-button .green-button .elementor-cta--skin-classic .elementor-cta__button.elementor-button{
+body .elementor-widget-button.icon-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.icon-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button.icon-button .elementor-button:hover,
+body .icon-button .elementor-button:hover,
+body .elementor-widget-button.icon-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.icon-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.icon-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button.icon-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.icon-button button:not(.gm-control-active):hover,
+body .elementor-widget-button.icon-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button.icon-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-call-to-action.icon-button .elementor-cta__button.elementor-button:hover {
+	background-color: var( --e-global-color-1b5cf53 );
+    color: var( --e-global-color-5c882e4 );
+	text-decoration: none;
+    border-color: var( --e-global-color-1b5cf53 );
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+body .elementor-widget-button.reverse-icon-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.reverse-icon-button [type="submit"]:not(.adminbar-button),
+body .reverse-icon-button .elementor-button,
+body .elementor-widget-button.reverse-icon-button .elementor-button,
+body .elementor-widget-button.reverse-icon-button [type="button"]:not(.gm-control-active):focus,
+body .elementor-widget-button.reverse-icon-button [type="button"]:not(.gm-control-active),
+body .elementor-widget-button.reverse-icon-button [type="submit"]:not(.adminbar-button):focus,
+body .elementor-widget-button.reverse-icon-button button:not(.gm-control-active):focus,
+body .elementor-widget-button.reverse-icon-button button:not(.gm-control-active),
+body .elementor-widget-button.reverse-icon-button .elementor-cta .elementor-cta__button.elementor-button,
+body .elementor-widget-button.reverse-icon-button .elementor-kit-7 .elementor-button:focus,
+body .elementor-widget-call-to-action.reverse-icon-button .elementor-cta__button.elementor-button {
+	background-color: var( --e-global-color-1b5cf53 );
+    color: var( --e-global-color-5c882e4 );
+    font-size: 31px;
+    line-height: 1;
+    padding: 6px 4px 6px 7.89px;
+    font-weight: 700;
+    border: 3px solid var( --e-global-color-1b5cf53 );
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 100px;
+    -webkit-appearance: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    font-family: "Barlow Condensed", Sans-serif;
+    max-width: 100%;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+body .elementor-widget-button.reverse-icon-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-icon-button [type="submit"]:not(.adminbar-button):hover,
+body .elementor-widget-button.reverse-icon-button .elementor-button:hover,
+body .reverse-icon-button .elementor-button:hover,
+body .elementor-widget-button.reverse-icon-button [type="button"]:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.reverse-icon-button [type="button"]:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-icon-button [type="submit"]:not(.adminbar-button):focus:hover,
+body .elementor-widget-button.reverse-icon-button button:not(.gm-control-active):focus:hover,
+body .elementor-widget-button.reverse-icon-button button:not(.gm-control-active):hover,
+body .elementor-widget-button.reverse-icon-button .elementor-cta .elementor-cta__button.elementor-button:hover,
+body .elementor-widget-button.reverse-icon-button .elementor-kit-7 .elementor-button:focus:hover,
+body .elementor-widget-call-to-action.reverse-icon-button .elementor-cta__button.elementor-button:hover {
+	text-decoration: none;
+    border-color: var( --e-global-color-5c882e4 );
+	color: var( --e-global-color-1b5cf53 );
+    background-color: var( --e-global-color-5c882e4 );
+}
+
+/* body .text-link [type="button"]:not(.gm-control-active),
+body .text-link [type="submit"]:not(.adminbar-button),
+body .text-link .elementor-button,
+body .text-link .elementor-button:focus,
+body .text-link [type="button"]:not(.gm-control-active):focus,
+body .text-link [type="button"]:not(.gm-control-active),
+body .text-link [type="submit"]:not(.adminbar-button):focus,
+body .text-link button:not(.gm-control-active):focus,
+body .text-link button:not(.gm-control-active),
+body .text-link.elementor-widget-call-to-action .elementor-cta__button-wrapper .elementor-cta__button,
+body .text-link.elementor-cta--skin-classic .elementor-cta__button.elementor-button {
+	color: #137ca6;
+    background-color: transparent;
+    font-size: 20px !important;
+    line-height: 24px;
+    padding: 0;
+    font-weight: 700 !important;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 0;
+    -webkit-appearance: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    max-width: 100%;
+    letter-spacing: -0.02em;
+}
+
+
+body .text-link .elementor-button span.last,
+body .text-link.elementor-widget-call-to-action .elementor-cta__button-wrapper .elementor-cta__button span.last,
+body .text-link.elementor-cta--skin-classic .elementor-cta__button.elementor-button span.last,
+body .arrow-btn .elementor-button span.last{
+	display: inline-block;
+}
+
+body .text-link .elementor-button span.last:after,
+body .text-link.elementor-widget-call-to-action .elementor-cta__button-wrapper .elementor-cta__button span.last:after,
+body .text-link.elementor-cta--skin-classic .elementor-cta__button.elementor-button span.last:after,
+body .arrow-btn .elementor-button span.last::after {
+	content: "";
+    width: 26px !important;
+    height: 22px;
+    display: inline-block;
+    background: url("../img/link-arrow.svg") center center no-repeat;
+    background-size: contain;
+    margin-bottom: -5px;
+    margin-left: 15px;
+    transition: all 0.3s;
+}
+
+body .arrow-btn .elementor-button span.last::after{
+	margin-left: 8px;
+}
+
+body .arrow-btn .elementor-button span.last::after{
+	background-image: url('../img/arrow-right.svg');
+}
+
+body .arrow-btn.dark-blue .elementor-button span.last::after{
+	background-image: url('../img/arrow-right-light-gray.svg');
+}
+
+body .arrow-btn.dark-blue .elementor-button:hover span.last::after{
+	background-image: url('../img/arrow-right.svg');
+}
+
+body .arrow-btn.light-gray .elementor-button:hover span.last::after{
+	background-image: url('../img/arrow-right-light-gray.svg');
+}
+
+body .text-link [type="button"]:not(.gm-control-active):hover,
+body .text-link [type="submit"]:not(.adminbar-button):hover,
+body .text-link .elementor-button:hover,
+body .text-link .elementor-button:focus:hover,
+body .text-link [type="button"]:not(.gm-control-active):focus:hover,
+body .text-link [type="button"]:not(.gm-control-active):hover,
+body .text-link [type="submit"]:not(.adminbar-button):focus:hover,
+body .text-link button:not(.gm-control-active):focus:hover,
+body .text-link button:not(.gm-control-active):hover,
+body .text-link.elementor-widget-call-to-action .elementor-cta__button-wrapper .elementor-cta__button:hover,
+body .text-link.elementor-cta--skin-classic .elementor-cta__button.elementor-button:hover {
 	background-color: transparent;
-    color: #62BE7C;
-	border: 2px solid #62BE7C;
+	color: #137ca6;
+	text-decoration: underline;
+	border: none;
 }
 
-body .elementor-widget-button .green-button [type="button"]:not(.gm-control-active):hover,
-body .elementor-widget-button .green-button [type="submit"]:not(.adminbar-button):hover,
-body .elementor-widget-button .green-button .elementor-button:hover,
-body .green-button .elementor-button:hover,
-body .elementor-widget-button .green-button [type="button"]:not(.gm-control-active):focus:hover,
-body .elementor-widget-button .green-button [type="button"]:not(.gm-control-active):hover,
-body .elementor-widget-button .green-button [type="submit"]:not(.adminbar-button):focus:hover,
-body .elementor-widget-button .green-button button:not(.gm-control-active):focus:hover,
-body .elementor-widget-button .green-button button:not(.gm-control-active):hover,
-body .elementor-widget-button .green-button .elementor-cta .elementor-cta__button.elementor-button:hover,
-body .elementor-widget-button .green-button .elementor-kit-7 .elementor-button:focus:hover,
-body .elementor-widget-button .green-button .elementor-cta--skin-classic .elementor-cta__button.elementor-button:hover{
-	background-color: #62BE7C;
-    color: #203141;
-	border: 2px solid #62BE7C;
-}
+body .text-link .elementor-button:after{
+    display: none !important;
+} */
 
+/* body .text-link .elementor-button:hover span.last:after,
+body .text-link.elementor-widget-call-to-action .elementor-cta__button-wrapper .elementor-cta__button:hover span.last:after,
+body .text-link.elementor-cta--skin-classic .elementor-cta__button.elementor-button:hover span.last:after {
+	border-color: #3c904b #3c904b transparent transparent !important;
+} */
+
+/* body .elementor-button span {
+	color: inherit;
+} */
 
 /* / ----------------------Button style---------------------- / */
 
@@ -481,31 +1000,31 @@ width: calc(100% - 30px);
 Select Dropdown Custom Style
 ------------------------------------------------------------ */
 /* gravity form select dropdowns */
-
 .ginput_container_select .select{
 	position: relative;
 }
+
 .ginput_container_select .select select,
 .gfield .clear-multi .ginput_container_date .select select,
 .gfield .gfield_time_ampm .select select,
 body select:not([class*="ui-datepicker"]) {
 	width: 100%;
-	display: block;
-	height: 58px;
-	cursor: pointer;
-	position: relative;
-	/* border: 1px solid #666; */
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
-	border-radius: 10px;
-    border: solid 2px #e3e8ef;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-radius: 50px;
+    border: 2px solid rgb(71 71 71 / 60%);
     padding-left: 16px;
     padding-right: 16px;
-	background: url(../img/chevron-down.svg) no-repeat center right 18px;
+    background: url(../img/arrow-down-black.svg) no-repeat center right 18px;
+	background-color: #f2f2f3;
     background-size: 18px;
-	padding: 12px 40px 12px 16px !important;
+    padding: 12px 40px 12px 16px !important;
+    margin: 0 !important;
 }
 
 body .gform_wrapper li.gfield_error .clear-multi .ginput_container_date .select {
@@ -513,35 +1032,39 @@ body .gform_wrapper li.gfield_error .clear-multi .ginput_container_date .select 
 }
 
 .s-hidden {
-	display: none !important;
+	display: none;
 }
 
 .styledSelect {
-    padding: 12px 40px 12px 16px;
-    position: relative;
-    height: 58px;
-    z-index: 4;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    cursor: pointer;
-    border-radius: 10px !important;
-    background-color: #ffffff;
-    border: solid 2px #e3e8ef;
-    box-shadow: none;
-    font-size: 18px !important;
-    line-height: 30px;
-    color: #203141 !important;
-    text-transform: none;
-    letter-spacing: 0px;
-    transition: all 0.3s;
+	padding: 10px 45px 10px 20px;
+	position: relative;
+	height: 50px;
+	z-index: 4;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: pointer;
+	border-radius: 50px !important;
+	background-color: #F2F2F3;
+	border: 2px solid rgb(71 71 71 / 60%);
+	box-shadow: none;
+	font-size: 16px !important;
+	line-height: 28px;
+	color: #1E2937 !important;
+	text-transform: none;
+	letter-spacing: 0px;
+  	transition: all 0.3s;
 }
+
 .styledSelect:focus{
-  border: 1px solid #a65d43;
+  	border: 2px solid #a65d43;
 }
 
 body .gform_wrapper .gfield_required {
-	color: #F43939;
-	margin-left: 0;
+	color: rgb(71 71 72 / 40%);
+    font-weight: 400 !important;
+    margin-left: 2px;
+    text-transform: lowercase;
+    letter-spacing: -0.3px;
 }
 
 body .gform_wrapper .gfield_time_ampm select {
@@ -555,20 +1078,19 @@ body .gform_wrapper .gfield_time_ampm select {
 } */
 
 .styledSelect:after {
-    content: "";
+	content: "";
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    right: 17px;
+    transform: translateY(calc(-50% + 1px));
+    right: 18px;
     line-height: 1;
-    width: 18px;
-    height: 12px;
-    background: url(../img/chevron-down.svg) no-repeat center;
-    background-size: contain;
+    width: 14px;
+    height: 8px;
+    background: url(../img/arrow-down-black.svg) no-repeat center;
 }
 
 .styledSelect.active:after {
-	background: url("../img/chevron-down.svg") no-repeat center;
+	background: url("../img/arrow-down-black.svg") no-repeat center;
   transform: translateY(-50%) rotate(180deg);
 }
 
@@ -580,37 +1102,37 @@ body .options {
     left: 0;
     z-index: 9;
     margin: 0 !important;
-    padding: 17px 12px;
+    padding: 0;
     list-style: none;
-    background: #fff;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border-radius: 10px;
-    max-height: 220px;
+    background: #f2f2f3;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 300px;
     overflow-y: auto;
-    border: solid 2px #ffffff;
-    box-shadow: 0 4px 20px rgb(101 117 167 / 25%);
+    border: 2px solid #137ca6;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+
 }
 
 body form .options li {
 	margin: 0;
-    padding: 7px 15px 7px;
-    font-size: 16px;
-    /* border-top: 1px solid #ededed; */
-    line-height: 24px;
-    letter-spacing: 0;
-    color: #58595B;
-    text-transform: none;
-    /* height: 40px; */
-    cursor: pointer;
-    border-radius: 5px;
+    padding: 10px 20px 10px;
+	font-size: 16px;
+	line-height: 28px;
+	letter-spacing: -0.18px;
+	color: #1E2937;
+	text-transform: none;
+	/* height: 40px; */
+	cursor: pointer;
 }
 
 body form .options li:hover {
-	background-color: #E3E9FB;
-    color: #00153A;
+	background-color: #DBE9EE;
 }
 
 .options li::before {
@@ -622,15 +1144,14 @@ body form .options li:hover {
 }
 
 .options li.active {
-	background-color: #E3E9FB;
-    color: #00153A;
+	background-color: #DBE9EE;
 	position: relative;
 	cursor: default;
 	pointer-events: none;
 }
 
 .styledSelect.noplaceholder .text-ellipses {
-	color: #0C2340;
+	color: rgba(71, 71, 71, 0.6);
 }
 /* ------------------------------------------------------------
 End of Select Dropdown Custom Style
@@ -801,17 +1322,18 @@ html body .gform_wrapper div.validation_error html body .gform_wrapper form {
 
 html body .gform_wrapper form ul.gform_fields li.gfield {
 	margin-top: 0;
-	margin-bottom: 15px !important;
+	margin-bottom: 16px !important;
 	border: 0;
 	background: none;
 	vertical-align: top;
-	letter-spacing: 0px;
-	padding: 0;
+	letter-spacing: -0.14px;
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
 }
 
-.gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half):not(.half-field):not(.full-field) {
+.gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
 	max-width: 100% !important;
-	width: 100%;
 }
 
 html body .gform_wrapper form ul.gform_fields li.gfield.bottom-info {
@@ -822,55 +1344,64 @@ html body .gform_wrapper form ul.gform_fields li.gfield .ginput_container {
 	margin-top: 0 !important;
 }
 
+html body .gform_wrapper .top_label .gfield_label,
+html body .gform_wrapper .gform_wrapper legend.gfield_label {
+	font-family: "Rubik", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+    color: #474747;
+    line-height: 24px;
+	margin-bottom: 8px;
+	letter-spacing: -0.5px;
+	margin-top: 0 !important;
+}
+
 html body .gform_wrapper form ul.gform_fields li.gfield input[type="text"],
 html body .gform_wrapper form ul.gform_fields li.gfield input[type="email"],
 html body .gform_wrapper form ul.gform_fields li.gfield input[type="number"],
-html body .gform_wrapper form ul.gform_fields li.gfield input[type="tel"] {
+html body .gform_wrapper form ul.gform_fields li.gfield input[type="tel"], 
+html body .gform_wrapper form ul.gform_fields li.gfield textarea {
 	margin-top: 0;
     margin-bottom: 0;
-    border-radius: 10px !important;
-    background-color: #ffffff;
-    border: solid 2px #E3E8EF;
+    border-radius: 50px !important;
+    background-color: #F2F2F3;
+    border: 2px solid rgb(71 71 71 / 60%);
     box-shadow: none;
-    font-size: 18px !important;
-    line-height: 30px !important;
-    color: #203141 !important;
+    font-size: 16px !important;
+    line-height: 28px !important;
+    color: #1E2937 !important;
     width: 100% !important;
-    height: 58px;
-    padding: 7px 16px !important;
+    height: 40px;
+    padding: 7px 20px !important;
     transition: all 0.3s;
+    height: 50px;
 }
 
 html body .gform_wrapper form ul.gform_fields li.gfield input[type="text"]::-webkit-input-placeholder,
 html body .gform_wrapper form ul.gform_fields li.gfield input[type="email"]::-webkit-input-placeholder,
 html body .gform_wrapper form ul.gform_fields li.gfield input[type="number"]::-webkit-input-placeholder,
 html body .gform_wrapper form ul.gform_fields li.gfield input[type="tel"]::-webkit-input-placeholder, 
-html body .gform_wrapper form ul.gform_fields li.gfield textarea::-webkit-input-placeholder {
-	color: rgba(32, 49, 65, 0.7) !important;
+html body .gform_wrapper form ul.gform_fields li.gfield textarea::-webkit-input-placeholder, 
+html body .gform_wrapper form ul.gform_fields li.gfield .styledSelect .text-ellipses {
+	color: rgba(71, 71, 71, 0.6);
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield .styledSelect .text-ellipses {
+	color: rgba(71, 71, 71, 0.6) !important;
 }
 
 html body .gform_wrapper form ul.gform_fields li.gfield input[type="text"]:focus,
 html body .gform_wrapper form ul.gform_fields li.gfield input[type="email"]:focus,
 html body .gform_wrapper form ul.gform_fields li.gfield input[type="number"]:focus,
 html body .gform_wrapper form ul.gform_fields li.gfield input[type="tel"]:focus, 
-html body .gform_wrapper form ul.gform_fields li.gfield textarea:focus {
-	border: solid 2px #002568;
+html body .gform_wrapper form ul.gform_fields li.gfield textarea:focus, 
+html body .gform_wrapper form ul.gform_fields li.gfield .styledSelect.active {
+	border: 2px solid #137CA6;
 }
 
 html body .gform_wrapper form ul.gform_fields li.gfield textarea {
-	margin-top: 0;
-    margin-bottom: 0;
-    border-radius: 10px !important;
-    background-color: #ffffff;
-    border: solid 2px #E3E8EF;
-    box-shadow: none;
-    font-size: 18px !important;
-    line-height: 30px !important;
-    color: #203141 !important;
-    width: 100% !important;
-    padding: 7px 16px !important;
-    transition: all 0.3s;
-	height: 175px;
+	height: 195px;
+	resize: none;
 }
 
 input:-webkit-autofill,
@@ -883,6 +1414,10 @@ input:-webkit-autofill:active {
 /*Change text in autofill textbox*/
 input:-webkit-autofill {
 	-webkit-text-fill-color: #666666 !important;
+}
+
+html body .gform_wrapper form ul.gform_fields li.gfield .styledSelect .text-ellipses.valueAdded{
+    color: #1E2937 !important;
 }
 
 /* html body .gform_wrapper input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
@@ -903,43 +1438,42 @@ html body .gform_wrapper form ul.gform_fields li.gfield .ginput_container.ginput
 	margin-top: 0 !important;
 }
 
-html body .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description, 
-html body .gform_wrapper .validation_message {
-	font-size: 16px;
-    color: #F43939;
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    padding-top: 4px;
-    line-height: normal;
-    line-height: 26px;
-    letter-spacing: -0.13px;
-    padding-right: 0;
+html body .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
+	font-size: 10px;
+	color: #e11919;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	padding-top: 5px;
+	line-height: normal;
+	letter-spacing: -0.13px;
+	padding-right: 7px;
+	display: none;
 }
 
-/* html body .gform_wrapper div.validation_error {
+html body .gform_wrapper .validation_message {
+	font-size: 10px;
+	color: #e11919;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	padding-top: 5px;
+}
+
+html body .gform_wrapper li.gfield_error .gfield_required{
+    color: #d53b12;
+	text-transform: capitalize;
+}
+
+html body .gform_wrapper div.validation_error {
 	border: 0;
 	font-size: 20px;
 	color: #f02525;
 	display: none;
-} */
+}
 
 html body .gform_wrapper li.gfield_error input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
-html body .gform_wrapper .gform_wrapper li.gfield_error textarea {
-	border: 2px solid #F43939 !important;
-}
-
+html body .gform_wrapper .gform_wrapper li.gfield_error textarea, 
 .gfield_error .styledSelect {
-	border-color: #F43939;
-}
-
-html body .gform_wrapper .top_label .gfield_label,
-html body .gform_wrapper .gform_wrapper legend.gfield_label {
-	font-size: 18px;
-    line-height: 30px;
-    color: #203141;
-	font-weight: 400;
-	margin-bottom: 12px;
-	margin-top: 0;
+	border: 2px solid #D73F09 !important;
 }
 
 
@@ -965,10 +1499,8 @@ html body .gform_wrapper li.gfield_error ul.gfield_radio {
 html body .gform_wrapper ul.gfield_radio li {
 	display: block;
 	position: relative;
-	padding-left: 35px;
 	margin-bottom: 12px;
-	cursor: pointer;
-	font-size: 22px;
+	/* cursor: pointer; */
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -986,27 +1518,27 @@ html body .gform_wrapper ul.gfield_radio li input {
 }
 
 html body .gform_wrapper ul.gfield_radio li label {
-	color: #203141;
-	padding-left: 35px;
+	padding-left: 40px;
+    font-size: 20px;
+    line-height: 24px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
+    padding-bottom: 2px;
 }
 
 html body .gform_wrapper ul.gfield_radio li label:before {
-    border-radius: 50%;
     content: "";
     position: absolute;
-    top: 6px;
+    top: 3px;
     left: 0;
     height: 24px;
     width: 24px;
-    background-color: #fff;
-    border: 2px solid #203141;
+	border-radius: 50%;
+    background-color: #f2f2f3;
+    border: 2px solid #8c8c8c;
 }
 
 html body .gform_wrapper ul.gfield_radio li input~label:hover:before {
-	background-color: rgb(32 49 65 / 15%);
+	background-color: #ccc;
 }
 
 html body .gform_wrapper ul.gfield_radio li:hover input~label {
@@ -1014,7 +1546,8 @@ html body .gform_wrapper ul.gfield_radio li:hover input~label {
 }
 
 html body .gform_wrapper ul.gfield_radio li input:checked~label:before {
-	background-color: #203141;
+	background-color: #12749B;
+    border-color: #12749B;
 }
 
 html body .gform_wrapper ul.gfield_radio li label:after {
@@ -1028,25 +1561,23 @@ html body .gform_wrapper ul.gfield_radio li input:checked~label:after {
 }
 
 html body .gform_wrapper ul.gfield_radio li label:after {
-	top: 13px;
+	top: 10px;
 	left: 7px;
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
-	background: #fff;
+	background: white;
 }
 
 html body .gform_wrapper ul.gfield_checkbox li {
 	display: block;
-	position: relative;
-	padding-left: 35px;
-	margin-bottom: 12px;
-	cursor: pointer;
-	font-size: 22px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+    position: relative;
+    margin-bottom: 12px;
+    /* cursor: pointer; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 html body .gform_wrapper ul.gfield_checkbox li:before {
@@ -1060,27 +1591,27 @@ html body .gform_wrapper ul.gfield_checkbox li input {
 }
 
 html body .gform_wrapper ul.gfield_checkbox li label {
-	color: #203141;
-	padding-left: 35px;
+	padding-left: 40px;
+    font-size: 20px;
+    line-height: 24px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
+    padding-bottom: 2px;
 }
 
 html body .gform_wrapper ul.gfield_checkbox li label:before {
 	content: "";
     position: absolute;
-    top: 4px;
+    top: 1px;
     left: 0;
     height: 24px;
     width: 24px;
-    background-color: #fff;
-    border: 2px solid #203141;
-    border-radius: 5px;
+    background-color: #f2f2f3;
+    border: 2px solid #8c8c8c;
+    border-radius: 6px;
 }
 
 html body .gform_wrapper ul.gfield_checkbox li input~label:hover:before {
-	background-color: rgb(32 49 65 / 15%);
+	background-color: #ccc;
 }
 
 html body .gform_wrapper ul.gfield_checkbox li:hover input~label {
@@ -1088,7 +1619,8 @@ html body .gform_wrapper ul.gfield_checkbox li:hover input~label {
 }
 
 html body .gform_wrapper ul.gfield_checkbox li input:checked~label:before {
-	background-color: #203141;
+	background-color: #12749B;
+    border-color: #12749B;
 }
 
 html body .gform_wrapper ul.gfield_checkbox li label:after {
@@ -1103,7 +1635,7 @@ html body .gform_wrapper ul.gfield_checkbox li input:checked~label:after {
 
 html body .gform_wrapper ul.gfield_checkbox li label:after {
 	left: 8px;
-    top: 7px;
+    top: 4px;
     width: 8px;
     height: 14px;
     border: solid white;
@@ -1135,44 +1667,6 @@ html body .gform_wrapper form ul.gform_fields li.gfield.combo-name-fields .valid
 	margin-bottom: 20px;
 }
 
-.ginput_container_checkbox + .validation_message, 
-.ginput_container_radio + .validation_message {
-    display: none;
-}
-html body .gform_wrapper .gfield_error .gfield_radio label, 
-html body .gform_wrapper .gfield_error .gfield_checkbox label{
-    color: #F43939;
-}
-
-html body .gform_wrapper .gfield_error .gfield_radio label:before, 
-html body .gform_wrapper .gfield_error .gfield_checkbox label:before{
-    border-color: #F43939;
-}
-
-.ginput_container_phone .validation_message{
-    display: none;
-}
-
-html body .gform_wrapper .gform_validation_errors{
-    display: none;
-}
-
-.gform_confirmation_wrapper{
-    text-align: center;
-    min-height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    background-color: #e4eaf1;
-	padding: 20px;
-}
-
-.gform_confirmation_message{
-    font-size: 22px;
-    font-weight: 700;
-    max-width: 380px;
-}
 
 /* ------------------------------------------------------------
 gravity form Button styling
@@ -1185,43 +1679,36 @@ html body .gform_wrapper form .gform_footer {
 }
 
 html body .gform_wrapper form .gform_footer input[type="submit"] {
-    max-width: 270px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 18px;
-    border: 2px solid #344A83;
-    background-color: transparent;
-    color: #344A83;
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
-    transition: all 0.3s;
-    transition-delay: -0.1s;
-    padding: 18px 30px 18px 30px;
-    -webkit-appearance: none;
-    box-sizing: border-box;
+    color: #1E2937;
+    background-color: #F68C1E;
+    font-size: 20px !important;
+    line-height: 32px !important;
+    padding: 12px 24px 12px;
+    font-weight: 700 !important;
+    border: 2px solid #F68C1E;
     display: inline-block;
+    text-decoration: none;
     cursor: pointer;
     text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-    text-transform: uppercase;
-    /* position: relative; */
-    overflow: hidden;
-    vertical-align: top;
-    letter-spacing: 0;
-    word-spacing: 0;
+    border-radius: 50px;
+    -webkit-appearance: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    max-width: 300px;
     width: 100%;
-	margin-left: 0;
-	margin-right: 0;
 }
 
 html body .gform_wrapper form .gform_footer input[type="submit"]:hover {
-	background-color: #344a83;
-    color: #ffffff;
-    text-decoration: none;
+    background-color: transparent;
+	color: #1E2937;
+	text-decoration: none;
+	border: 2px solid #F68C1E;
 }
 
 body .gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half){
 	max-width: 100% !important;
+	padding: 0 !important;
 }
 html body .gform_wrapper form .gform_footer input[type="submit"] + img{
     position: absolute;
@@ -1230,11 +1717,101 @@ html body .gform_wrapper form .gform_footer input[type="submit"] + img{
     transform: translate(-50%, -30px);
 }
 
-body .gform_wrapper.gform_validation_error .top_label li.gfield.gfield_error.gf_left_half, 
-body .gform_wrapper.gform_validation_error .top_label li.gfield.gfield_error.gf_right_half{
+body .gform_wrapper.gform_validation_error .top_label li.gfield.gfield_error.gf_left_half, body .gform_wrapper.gform_validation_error .top_label li.gfield.gfield_error.gf_right_half{
 	max-width: 50%;
 	margin-right: 0 !important;
 }
 /* ------------------------------------------------------------
 End gravity form style
 ------------------------------------------------------------ */
+
+.coming-soon-content {
+    min-height: calc(100vh - 1141px);
+}
+/* ---------------------------- code for cookies ---------------------------- */
+#cookie-notice {
+	background-color: rgba(0, 37, 104, .85) !important;
+	position: fixed;
+	z-index: 11111;
+}
+
+#cookie-notice #cn-notice-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#cookie-notice #cn-notice-text+#cn-accept-cookie,
+#cn-notice-buttons {
+	display: none !important;
+}
+
+#cookie-notice .cookie-notice-container {
+	padding: 25px 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#cookie-notice .cookies-message {
+	text-align: left;
+	font-family: "Montserrat", Sans-serif;
+	display: block;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	width: 100%;
+	max-width: 60%;
+	margin: 0 1em 0 auto;
+	font-size: 12px;
+}
+
+#cookie-notice .cookies-message a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+#cookie-notice .cookies-message a:hover {
+	text-decoration: none;
+}
+
+#cookie-notice .cookies-button-container {
+	max-width: 40%;
+	text-align: center;
+	display: flex;
+	align-content: space-between;
+	margin: 0 auto;
+	font-weight: bold;
+}
+
+#cookie-notice .cookies-button-container .cookies-button {
+	border: 0;
+	display: inline-block;
+	color: #fff;
+	margin: 0 4px;
+	padding: 5px 10px;
+	min-width: 110px;
+	font-weight: 500;
+	border-radius: 3px;
+	text-align: center;
+	background-color: #fff;
+	font-family: "Montserrat", sans-serif;
+	text-decoration: none;
+	line-height: 30px;
+	color: #344A83;
+}
+
+#cookie-notice .cookies-button-container .cookies-button:hover {
+	background-color: #fff;
+	color: #344A83;
+	opacity: 0.8;
+}
+
+.cn-close-icon:before,
+.cn-close-icon:after {
+	background-color: #fff;
+}
+
+.cookie-notice-container .cn-text-container {
+	margin: 0
+}
+
+/* -------------------------- end code for cookies -------------------------- */
