@@ -1,0 +1,300 @@
+SamePage App ( Batch 1 18 pages estimate )
+
+Base Setup       --    2hr
+
+1. Splash -- 2hr
+
+2.1 Login Password -- 2hr
+2.2 Setup Number --  30 min
+
+3. landing-light-firsttime  -- 30 min
+
+4. landing-light-firsttime-1 --  2.5hr
+
+5.1. landing-light-firsttime-6  -- 5hr ( Form Styling )
+5.2. landing-light-firsttime-8 -- 30 min
+5.3. landing-light-firsttime-9   --  2hr
+5.4 landing-light-firsttime-13  --  Discussion
+5.5 landing-light-firsttime-16  --  2hr
+5.6 landing-light-firsttime-18  --  1hr
+
+6.1 landing-light-firsttime-11  --  2hr
+6.2 landing-light-firsttime-7   --  1hr
+6.3 landing-light-firsttime-12   --  2hr
+
+
+7.0 landing-light-firsttime-5   --  2hr
+
+8.1 Wallets              --  4hr
+8.2 Wallet-2            --  4hr
+8.3 Wallet-3            --  1hr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ if ($(".cards_wrapper_v2").length) {
+        $('.cards_wrapper_v2').append(`
+    		  <div class="slider-controllers"> 
+    				<div class="cs-arrow-prev nav-btn"></div>
+    				<div class="cs-pagination"></divlet cs_swiper;
+
+$(window).on("load resize", function () {
+    if ($(".services-slider-wrapper").length) {
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            $(".services-slider-wrapper").addClass("swiper");
+            $(".services-slider-wrapper > .e-con-inner").addClass("swiper-wrapper");
+            $(".services-slider-wrapper > .e-con-inner > .slider-cta-wrapper").addClass("swiper-slide");
+
+            if (cs_swiper?.destroyed === true || !cs_swiper) {
+                cs_swiper = new Swiper(".services-slider-wrapper", {
+                    slidesPerView: 1.75,
+                    loop: false,
+                    spaceBetween: 10,
+                    grabCursor: true,
+                    breakpoints: { 
+                        499: {
+                            slidesPerView: 2.2,
+                            spaceBetween: 15,
+                        },
+                    },
+                },
+              );
+            }
+        } else {
+            if (cs_swiper !== undefined) cs_swiper.destroy(true, true);
+            $(".services-slider-wrapper").removeClass(
+                "swiper  swiper-container-initialized "
+            );
+            $(
+                ".services-slider-wrapper > .e-con-inner"
+            ).removeClass("swiper-wrapper");
+            $(
+                ".services-slider-wrapper > .e-con-inner > .slider-cta-wrapper"
+            ).removeClass("swiper-slide");
+        }
+    }
+						 
+						 
+// 					if (window.matchMedia("(max-width: 767px)").matches) {	 
+// 		$('.offers-container-wrapper .elementor-widget-call-to-action:not(.contact_info) .elementor-cta__title').on('click', function () {
+//     var $description = $(this).siblings('.elementor-cta__description');
+    
+//     $('.offers-container-wrapper .elementor-widget-call-to-action:not(.contact_info) .elementor-cta__description').not($description).slideUp();
+//     $('.offers-container-wrapper .elementor-widget-call-to-action:not(.contact_info) .elementor-cta__title.active').not(this).removeClass('active');
+    
+//     $description.slideToggle();
+//     $(this).toggleClass('active');
+			
+// 			 let closestParent = $(this).closest('.elementor-widget-call-to-action');
+//    setTimeout(function () {
+//   $('html, body').animate({
+//     scrollTop: $(closestParent).offset().top - 180
+//   }, 500);
+//    }, 500); // Add the setTimeout with a delay of 500 milliseconds
+			
+			
+// 		});
+// 		
+// 		
+// 		
+	
+	
+});						 
+	
+// Here You can type your custom JavaScript...
+					$(document).ready(function () {
+    $(document).on('click', '.offers-container-wrapper .elementor-widget-call-to-action:not(.contact_info) .elementor-cta__title', function (e) {
+			e.stopPropagation();
+  if (window.matchMedia("(max-width: 767px)").matches == true) {
+		
+ $(this).next().slideToggle();
+			
+ $(this).toggleClass('active');
+ $(this).closest('.elementor-widget-call-to-action').siblings().find('.elementor-cta__title').removeClass('active').next().slideUp();
+      var closestParent = $(this).closest('.elementor-widget-call-to-action');
+      setTimeout(function () {
+        $('html, body').animate({
+          scrollTop: closestParent.offset().top - 180
+        }, 500);
+      }, 500); // Add the setTimeout with a delay of 500 milliseconds
+		
+  }
+    });					 
+
+
+
+						 
+						 
+						 
+						 
+						 
+$(".wpb-accordions .e-n-accordion-item-title").on('click',function() {
+     let closestParent = $(this).closest('.e-n-accordion-item ');
+   setTimeout(function () {
+  $('html, body').animate({
+    scrollTop: $(closestParent).offset().top - 180
+  }, 500);
+   }, 500); // Add the setTimeout with a delay of 500 milliseconds
+});
+
+			
+
+});
+	
+
+	
+	
+	
+// Get the text of the first li element and set it to the span initially
+var firstLiText = $('.top-tabs-sections .elementor-icon-list-items .elementor-icon-list-item:first-child').text();
+$('.top-tabs-sections .elementor-widget-icon-list .elementor-widget-container').append('<div class="wrapper_menu_bar"><span class="list_menu_bar">' + firstLiText + '</span></div>');
+
+$('.top-tabs-sections .elementor-widget-icon-list .wrapper_menu_bar').on('click', function() {
+  $('.top-tabs-sections .elementor-icon-list-items').slideToggle();
+});
+	
+
+	
+
+
+ $(document).ready(function () {
+            
+	 
+		$(".top-tabs-sections .elementor-icon-list-item a").on("click", function(e) {
+				e.preventDefault(); // Prevent the default behavior of jumping to the anchor
+				e.stopPropagation();
+
+  var clickedLiText = $(this).text();
+  
+  // Update the text of the span
+  $('.top-tabs-sections .elementor-widget-icon-list .list_menu_bar').text(clickedLiText);
+	let target = $(this).attr("href");
+	// Slide up the toggled elements
+	
+	if(window.matchMedia('(max-width: 767px)').matches == true) {
+		$('.top-tabs-sections .elementor-icon-list-items').slideUp(400,function(){
+			
+		let headerHeight = $('.mobile-fixed').height();
+			if($(target).length > 0){
+		$("html, body").animate({
+						scrollTop: $(target).offset().top - headerHeight - 20 // Adjust the offset as needed
+				}, 500); // Adjust the duration as needed
+		}
+		});
+	} else {
+		let headerHeight = 80;
+		if($(target).length > 0){
+		$("html, body").animate({
+						scrollTop: $(target).offset().top - headerHeight - $(".top-tabs-sections").height() // Adjust the offset as needed
+				}, 500); // Adjust the duration as needed
+		}
+	}
+		});
+	 
+});
+
+
+
+
+	
+	
+
+	
+	$(window).on("load resize", function () {    
+        $(window).scroll(function() {
+            var scrollPosition = $(window).scrollTop();
+            var screenWidth = $(window).width();
+            if (screenWidth <= 991) {
+                if (scrollPosition > 300) {
+                    $(".top-tabs-sections").css("top", "135px");
+                } else {
+                    $(".top-tabs-sections").css("top", "135px"); // This line can be removed since it sets the same value as the previous line.
+                }
+            } else {
+                if (scrollPosition > 300) {
+                    $(".top-tabs-sections").css("top", "130px");
+                } else {
+                    $(".top-tabs-sections").css("top", "180px");
+                }
+            }
+        });
+});
+	
+
+
+	const $sections = $("section[id]");
+	$(window).on("scroll", function() {
+		
+			let scrollY = $(window).scrollTop();
+
+			$sections.each(function() {
+				const $current = $(this);
+				const sectionHeight = $current.outerHeight();
+				const sectionTop = $current.offset().top - $('.desktop-nav-wrapper').height() - 45;
+				const sectionId = $current.attr("id");
+
+				if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+					// Add the "active" class to the parent <li> element 
+					$(".top-tabs-sections .elementor-icon-list-items li:has(a[href*=" + sectionId + "])").addClass("active");
+				} else {
+					// Remove the "active" class from the parent <li> element
+					$(".top-tabs-sections .elementor-icon-list-items li:has(a[href*=" + sectionId + "])").removeClass("active");
+						
+				}
+			});
+
+	});
+	
+	
+// 	$(window).scroll(function() { 
+	
+// 		if($('.top-tabs-sections .elementor-icon-list-item.active' == true)) {
+			 
+			 
+// 		  var scrolledLiText = $('.top-tabs-sections .elementor-icon-list-item.active a .elementor-icon-list-text').text();
+// 			// Update the text of the span
+// 			$('.top-tabs-sections .elementor-widget-icon-list .list_menu_bar').text(scrolledLiText);
+		
+// 		} else {
+// 			var firstLiText = $('.top-tabs-sections .elementor-icon-list-items .elementor-icon-list-item:first-child').text();
+// 			$('.top-tabs-sections .elementor-widget-icon-list .list_menu_bar').text(firstLiText);
+// 		}
+		
+// 	});
+// 	
+$(window).scroll(function() { 
+    if ($('.top-tabs-sections .elementor-icon-list-item.active').length > 0) {
+        var scrolledLiText = $('.top-tabs-sections .elementor-icon-list-item.active a .elementor-icon-list-text').text();
+        // Update the text of the span
+        $('.top-tabs-sections .elementor-widget-icon-list .list_menu_bar').text(scrolledLiText);
+    } else {
+        var firstLiText = $('.top-tabs-sections .elementor-icon-list-items .elementor-icon-list-item:first-child').text();
+        $('.top-tabs-sections .elementor-widget-icon-list .list_menu_bar').text(firstLiText);
+    }
+});
+
+	
+	
+	
+
+
+
+
+
+
+
+
