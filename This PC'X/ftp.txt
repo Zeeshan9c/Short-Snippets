@@ -1,0 +1,53 @@
+Sham FS Stage
+GF^6Q_F>6du$VmzC
+SFTP Address: shamfsstage.sftp.wpengine.com
+Port Number: 2222
+shamfsstage-ltdev-jul7
+
+Acteev Dev
+acteevappdev.sftp.wpengine.com
+2222
+acteevappdev-ltdev_temp_feb25
+lTqc0KWZIryg
+
+Main Acteev
+SFTP Address: mainacteevwdev.sftp.wpengine.com
+Port Number: 2222
+mainacteevwdev-aug22
+58WHiju0h9E!MM#8
+
+NKK Satage
+SFTP Address: nkkstage.sftp.wpengine.com
+Port Number: 2222
+nkkstage-ltdev-mar06
+go2mbdLDCVp5%
+
+Palms Dev
+palmscasinodev.sftp.wpengine.com
+2222
+palmscasinodev-ltdev_temp_feb24
+XJFj3z2tNAo2"
+
+Plus Alliance Dev
+■ SFTP ■
+plusalliannov.sftp.wpengine.com
+Port Number: 2222
+plusalliannov-ltdev-nov18
+ebS2cIxDdMN3
+
+Sham FSW Dev
+shamrockfswdev.sftp.wpengine.com
+2222
+shamrockfswdev-ltdev_mar07
+9o7glYkCb3Pi
+
+SparkOne Dev
+https://one2one.sparklight.com/
+ltdev_editor_feb21
+s4xZDH1^eh^teGVH84Or7
+
+One to one Dev
+SFTP Address: one2onedev.sftp.wpengine.com
+Port Number: 2222
+one2onedev-ltdev_feb22
+F9cIKpV5UP8Q

@@ -1,0 +1,76 @@
+.simcal-calendar-grid .simcal-prev-wrapper button i::before,
+.simcal-calendar-grid .simcal-next-wrapper button i::before {
+	color: #fff;
+}
+.simcal-calendar-grid .simcal-calendar-head tr:nth-child(1) th {
+	background-color: #2d9f3e;
+}
+.simcal-calendar-grid .simcal-calendar-head tr:nth-child(2) th {
+	background-color: #F0F0F0;
+}
+.simcal-calendar-grid .simcal-calendar-head .simcal-nav h3 span {
+	color: #fff;
+}
+.simcal-calendar-grid th, 
+.simcal-calendar-grid td {
+	border: 1px solid #E5E5E5;
+}
+.simcal-calendar-grid .qtip-content a,
+.simcal-calendar-grid .qtip-content .simcal-event-title {
+	letter-spacing: 0.3px;
+}
+.simcal-event-bubble .qtip-content p:last-child {
+	margin-bottom: 0;
+}
+.simcal-event-bubble .qtip-content .simcal-event-title {
+	font-size: 13px;
+}
+.simcal-event-bubble .qtip-content .simcal-event-title,
+.simcal-calendar-grid .qtip-content a,
+.simcal-calendar-grid .simcal-day-has-events .simcal-events li {
+	font-family: "HelveticaNeueLTStd-BdCn", "HelveticaNeue", "Helvetica Neue", "Helvetica", "sans-serif"
+}
+.simcal-calendar-grid .simcal-day-has-events .simcal-events li {
+	position: relative;
+	padding: 0 0 6px 10px;
+	margin: 0;
+	border: 0;
+}
+.simcal-calendar-grid .simcal-day-has-events .simcal-events li span { 
+	font-size: 13px;
+	line-height: 1.2;
+}
+.simcal-calendar-grid .simcal-day-has-events .simcal-events li::after {
+	content: '';
+	min-width: 6px;
+	min-height: 6px;
+	height: 6px;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	background-color: #329F42;
+}
+.simcal-calendar-grid .simcal-day > div {
+	padding: 0 10px !important;
+	box-sizing: border-box;
+	border: 0 !important;
+}
+html body .simcal-calendar-grid .simcal-day.simcal-present {
+	background-color: rgba(50, 159, 66, 0.4);
+	border: 1px solid #329F42 !important;
+	z-index: 100; 
+	position: relative;
+}
+.simcal-calendar-grid .simcal-day:not(.simcal-day-void-last):hover {
+	background-color: #F0F0F0 !important;
+}
+.simcal-calendar-grid .simcal-day.simcal-present .simcal-day-label {
+	font-weight: 700;
+}
+.simcal-calendar-grid .simcal-day > div .simcal-day-label {
+	background-color: transparent !important;
+	color: #2d2a26 !important;
+	font-size: 16px;
+	padding: 12px 0;
+	text-align: left;
+}

@@ -1,0 +1,145 @@
+<div class="block_header account_welcome" id="build_case">
+  <div class="theme-block">
+    <h2 class="{{ section.settings.tags_selection }}">{{ section.settings.heading_value }}</h2>
+  </div>
+  <div class="theme-block">
+    <div class="rte">
+      <div class="enlarge-text">
+        {{ section.settings.description_value }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="memberships_wrapper previous_purchased_block" style="display:flex;flex-wrap:wrap;margin-top:40px">
+  {% assign build_a_case_order = nil %}
+  {% assign oldest_order_date = null %}
+  {% assign build_a_case_count = 0 %}
+  
+<div class="product-wrapper">
+  {% assign build_a_case_count = 0 %}
+  {% for order in customer.orders reversed %}
+    
+   
+    
+    {% if order.fulfillment_status == 'unfulfilled' and order.shipping_method.title == 'Build-a-Case' %}
+      {% if build_a_case_order == nil or order.created_at < oldest_order_date %}
+        {% assign build_a_case_order = order %}
+        {% assign oldest_order_date = order.created_at %}
+      {% endif %}
+      {% for line_item in order.line_items reversed %}
+        {% if line_item.product.type != 'Subscriptions' %}
+          {% for i in (1..line_item.quantity) %}
+            {% assign build_a_case_count = build_a_case_count | plus: 1 %}
+            {% if build_a_case_count <= 12 %}
+              <div class="product_block">
+                <div class="image-wrap">
+                  {% if line_item.image.src != blank %}
+                    <img src="https://cdn.shopify.com/s/files/1/0551/3628/8822/{{ line_item.image.src }}" alt="{{ line_item.title }}" />
+                  {% else %}
+                    <img style="opacity:1" class="grid-product__image" src="{{ 'fallback-img.webp' | asset_url }}" alt="Placeholder Image">
+                  {% endif %}
+                </div>
+                <div class="grid-product__meta">
+                  <div class="grid-product__title">{{ line_item.title }}</div>
+                  <div class="grid-product__price">Regular Price: {{ line_item.price | money }}</div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+        
+      {% endfor %}
+      {% comment %}
+      {% if build_a_case_count >= 12 %}
+        <h4>Case is full</h4>
+      {% endif %}
+      {% endcomment %}
+    </div>
+
+
+  <div class="build-case-notification" style="order:-1;width:100%;margin-bottom:30px;display:flex;gap:10px">
+    <div class="count-build" style="display:flex;align-items:center">
+      <img width="36px" height="96px" src="{{ 'bottle-build-case.png' | asset_url }}" title="" />
+      <div class="bottle-content" style="margin-left:15px">
+        {% if build_a_case_count >= 12 %}
+          <h4>Your case is full</h4>
+          <div class="bottles-dots filled-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        {% else %}
+          <h4>{{ build_a_case_count }} Bottles In Your Case</h4>
+          <p>Add {{ 12 | minus: build_a_case_count }} Bottles to complete your Case</p>
+          <div class="bottles-dots bottles-dots-{{ build_a_case_count }}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+ 
+      <div class="remaining-days-wrp">
+  {% if oldest_order_date != null %}
+    {% assign today = "now" | date: "%s" %}
+    
+    {% assign two_months_from_oldest_order = oldest_order_date | date: "%s" | plus: 5184000 %}
+    {% assign remaining_days = two_months_from_oldest_order | minus: today | divided_by: 86400 | round %}
+    {% assign remaining_days_abs = remaining_days | abs %}
+    
+    {% assign next_package_start_date = two_months_from_oldest_order | date: "%s" %}
+    {% assign next_package_end_date = next_package_start_date | plus: 5184000 %}
+    {% assign next_package_end_date_formatted = next_package_end_date | date: "%d-%B, %Y" %}
+    
+
+      <h5 style="display:none">You started the Build-a-Case bottles on {{ oldest_order_date | date: "%d-%B, %Y" }}.</h5>
+      
+      {% if remaining_days > 0 %}
+        <h5 style="margin-bottom:10px;color:#000;margin-top:-24px">Expected Date: {{ two_months_from_oldest_order | date: "%d-%B, %Y" }}.</h5>
+        <div class="right-content-clock">
+          <img width="86px" height="92px" src="{{ 'clock-time.svg' | asset_url }}" title="" />
+          <div class="remaining-days">
+            <h4>There are {{ remaining_days }} Days Remaining</h4>
+            <p>Complete your order and we will ship it to you for free.</p>
+          </div>
+        </div>
+      {% else %}
+        <h5>Your 2-month Build-a-Case package has ended.</h5>
+        <h5 style="margin-bottom:10px;color:#000">Next Package: {{ next_package_end_date_formatted }}.</h5>
+        <div class="right-content-clock">
+          <img width="86px" height="92px" src="{{ 'clock-time.svg' | asset_url }}" title="" />
+          <div class="remaining-days">
+            <h4>Next Package Starts in 60 Days</h4>
+            <p>Complete your order and we will ship it to you for free.</p>
+          </div>
+        </div>
+      {% endif %}
+  
+  {% else %}
+    <div>No "Build-a-Case" order with an unfulfilled status was found.</div>
+  {% endif %}
+</div>
+  </div>
+</div>

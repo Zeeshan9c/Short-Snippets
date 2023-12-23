@@ -1,0 +1,229 @@
+body {
+   
+    width: 100vw;
+    height: 100vh;
+  }
+
+
+
+
+
+  .main-wrapper {
+    background: radial-gradient(circle, #24246e, #06051f);
+    overflow: hidden;
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+    height: 600px;
+  }
+
+  /* Common styles for all colored divs */
+  .main-wrapper div {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    opacity: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* Animation for the purple div */
+  .purple {
+    background-image: url(img/star.svg);
+    animation: purple 24s linear infinite;
+    top: 80%; /* Changed the initial vertical position */
+    right: 50%; /* Changed the initial horizontal position */
+  }
+
+  @keyframes purple {
+    0%, 100% {
+      top: 100%;
+      right: 10%;
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+    50% {
+      top: 14%;
+      right: 100%;
+      opacity: 1;
+    }
+  }
+
+  /* Animation for the medium-blue div */
+  .medium-blue {
+    background-image: url(img/blue-rectangle.svg);
+    animation: mediumBlue 18s linear infinite;
+    top: 30%; /* Changed the initial vertical position */
+    right: 20%; /* Changed the initial horizontal position */
+  }
+
+  @keyframes mediumBlue {
+    0%, 100% {
+      top: 60%;
+      right: 100%;
+      opacity: 0;
+    }
+    15%, 85% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    50% {
+      top: 25%;
+      right: 10%;
+      opacity: 0.6;
+      transform: scale(2);
+    }
+  }
+
+  /* Animation for the light-blue div */
+  .light-blue {
+    background-image: url(img/golden-rectanglesvg.svg);
+    animation: lightBlue 20s linear infinite;
+    top: 60%; /* Changed the initial vertical position */
+    right: 100%; /* Changed the initial horizontal position */
+    animation-delay: 2s; 
+
+  }
+
+  @keyframes lightBlue {
+    0%, 100% {
+      top: 40%;
+      right: 100%;
+      opacity: 0;
+    }
+    20%, 80% {
+      opacity: 0.9;
+      transform: scale(1);
+    }
+    50% {
+      top: 15%;
+      right: 0%;
+      opacity: 0.7;
+      transform: scale(1.5);
+    }
+  }
+
+  /* Animation for the red div */
+  .red {
+    background-image: url(img/pink-circle.svg);
+    animation: red 17s linear infinite;
+    top: 40%; /* Changed the initial vertical position */
+    right: 80%; /* Changed the initial horizontal position */
+  }
+
+  @keyframes red {
+    0%, 100% {
+      top: 80%;
+      right: 30%;
+      opacity: 0;
+    }
+    25%, 75% {
+      opacity: 0.8;
+    }
+    50% {
+      top: 10%;
+      right: 50%;
+      opacity: 0.6;
+    }
+  }
+
+  /* Animation for the orange div */
+  .orange {
+    background-image: url(img/purple-circle.svg);
+    animation: orange 55s linear infinite;
+    top: 90%; /* Changed the initial vertical position */
+    right: 5%; /* Changed the initial horizontal position */
+  }
+
+  @keyframes orange {
+    0%, 100% {
+      top: 10%;
+      right: 5%;
+      opacity: 0;
+    }
+    30%, 70% {
+      opacity: 0.8;
+      transform: rotate(0deg);
+    }
+    50% {
+      top: 50%;
+      right: 80%;
+      opacity: 0.5;
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Animation for the light-green div */
+  .light-green {
+    background-image: url(img/transparent-star.svg);
+    animation: lightGreen 27s linear infinite;
+    top: 70%; /* Changed the initial vertical position */
+    right: 85%; /* Changed the initial horizontal position */
+  }
+
+  @keyframes lightGreen {
+    0%, 100% {
+      top: 50%;
+      right: 15%;
+      opacity: 0;
+    }
+    45%, 55% {
+      opacity: 0.7;
+    }
+    50% {
+      top: 5%;
+      right: 85%;
+      opacity: 0.4;
+    }
+  }
+
+  /* Animation for the lime div */
+  .lime {
+    background-image: url(img/transparent-trinagle.svg);
+    animation: lime 40s linear infinite;
+    top: 10%; /* Changed the initial vertical position */
+    right: 50%; /* Changed the initial horizontal position */
+  }
+
+  @keyframes lime {
+    0%, 100% {
+      top: 20%;
+      right: 50%;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.9;
+    }
+    50% {
+      top: 90%;
+      right: 20%;
+      opacity: 0.6;
+    }
+  }
+
+  /* Animation for the magenta div */
+  .magenta {
+    background-image: url(img/triangle.svg);
+    animation: magenta 28s linear infinite;
+    top: 50%; /* Changed the initial vertical position */
+    right: 10%; /* Changed the initial horizontal position */
+  }
+
+  @keyframes magenta {
+    0%, 100% {
+      top: 30%;
+      right: 100%;
+      opacity: 0;
+    }
+    55%, 45% {
+      opacity: 0.8;
+    }
+    50% {
+      top: 100%;
+      right: 5%;
+      opacity: 0.5;
+    }
+  }

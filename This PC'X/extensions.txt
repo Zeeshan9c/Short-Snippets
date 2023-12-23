@@ -1,0 +1,13 @@
+code --install-extension aaron-bond.better-comments
+code --install-extension AnbuselvanRocky.bootstrap5-vscode
+code --install-extension eamodio.gitlens
+code --install-extension esbenp.prettier-vscode
+code --install-extension formulahendry.auto-close-tag
+code --install-extension formulahendry.auto-rename-tag
+code --install-extension mblode.twig-language-2
+code --install-extension pranaygp.vscode-css-peek
+code --install-extension ritwickdey.LiveServer
+code --install-extension shinhwagk.mkstring
+code --install-extension sissel.shopify-liquid
+code --install-extension usernamehw.remove-empty-lines
+code --install-extension xabikos.JavaScriptSnippets

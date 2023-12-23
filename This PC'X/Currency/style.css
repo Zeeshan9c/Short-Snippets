@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#chat-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+#response {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.currency_warpper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+}
+
+.currency_warpper .container {
+	max-width: 700px;
+	width: 100%;
+	margin: 0 auto;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+	padding: 40px 30px;
+	border-bottom: 4px dotted #000000;
+	border-top: 4px dotted #000000;
+}
+
+.currency_warpper .header_block {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.currency_warpper .header_block .heading {
+	padding-bottom: 12px;
+}
+
+.currency_warpper .inner_wrapper {
+	display: flex;
+	margin-bottom: 30px;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.currency_warpper .inner_item {
+	  flex: 1 calc(50% - 15px);
+}
+
+.currency_warpper .inner_item input,
+.currency_warpper .inner_item select {
+	width: 100%;
+	border: 2px solid #ececec;
+	height: 40px;
+	font-size: 20px;
+	line-height: 1;
+	padding: 8px 8px;
+}
+
+.currency_warpper .inner_item .number_output,
+.currency_warpper .inner_item .number_input,
+.currency_warpper .inner_item .currency_from,
+.currency_warpper .inner_item .currency_to {
+	margin-top: 15px;
+}
+
+.currency_warpper .footer_results {
+	background-color: rgb(0 0 0 / 20%);
+	text-align: center;
+	padding: 12px;
+	font-weight: bold;
+}
+
+.currency_warpper .footer_results span.fixed_out {
+	color: red;
+}
+
+@media screen and (max-width: 480px) {
+.currency_warpper .inner_wrapper {
+	flex-direction: column;
+	}
+}
+
