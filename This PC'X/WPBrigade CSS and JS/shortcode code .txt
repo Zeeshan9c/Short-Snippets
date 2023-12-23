@@ -1,0 +1,101 @@
+.post_and_aside {
+	padding-top: 40px;
+	padding-bottom: 100px;
+}
+
+.post_and_aside .posts_block > * {
+	font-family: Poppins;
+}
+
+.post_and_aside > .wp-block-columns .posts_block {
+	flex-basis: 71%;
+	padding-right: 60px;
+}
+
+.post_and_aside > .wp-block-columns .aside_block {
+	flex-basis: 29%;
+}
+
+.post_and_aside > .wp-block-columns .posts_block .blog-posts-list {
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.post_and_aside > .wp-block-columns .posts_block .blog-posts-list .blog-post {
+	width: calc(50% - 15px);
+/* 	outline: 1px solid red; */
+}
+
+.post_and_aside > .wp-block-columns .posts_block .blog-posts-list .blog-post .featured-image {
+	margin-bottom: 12px;
+	position: relative;
+	padding-bottom: 54%;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.post_and_aside > .wp-block-columns .posts_block .blog-posts-list .blog-post .featured-image img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.post_and_aside > .wp-block-columns .posts_block .blog-posts-list .blog-post .post_title {
+	color: #181E34;
+	font-size: 24px;
+	line-height: 1.5;
+	margin-top: 7px;
+}
+
+.post_and_aside > .wp-block-columns .posts_block .blog-posts-list .blog-post .post_informations span {
+	color: #A2A9AB;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.66;
+	letter-spacing: 0.09px;
+}
+
+.post_and_aside > .wp-block-columns .posts_block .blog-posts-list .blog-post .post_informations {
+	display: flex;
+	justify-content: space-between;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+
+.post_and_aside > .wp-block-columns .posts_block .blog-posts-list .blog-post .post_title a {
+	color: inherit;
+	text-decoration: none;
+}
+.post_and_aside > .wp-block-columns .posts_block .blog-posts-list .blog-post .post_title a:hover {
+	text-decoration: underline;
+}
+
+.wp-block-search__inside-wrapper input[type="search"] {
+	border-radius: 5px;
+	background: #EDF5FB;
+}
+
+@media screen and (max-width: 1024px) {
+	.post_and_aside > .wp-block-columns .posts_block {
+		padding-right: 30px;
+	}
+	.post_and_aside > .wp-block-columns .aside_block {
+		
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.post_and_aside > .wp-block-columns {
+		flex-wrap: wrap !important;
+	}
+	.post_and_aside > .wp-block-columns .posts_block {
+		padding-right: 0;
+		flex-basis: 100%;
+	}
+	.post_and_aside > .wp-block-columns .aside_block {
+		flex-basis: 100%;
+		display: none;
+	}
+}

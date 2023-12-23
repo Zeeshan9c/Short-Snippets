@@ -1,0 +1,351 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8125;
+    /* 29px */
+    color: rgba(0, 0, 0, .8);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 1.2;/* 120px */
+    color: #ffffff;
+}
+
+h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.2;/* 62.4px */
+    color: #ffffff;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4; /* 56px */
+    color: #ffffff;
+}
+
+h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;/* 28px */
+    color: #ffffff;
+}
+
+h5 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.611111; /* 29px */
+    color: #ffffff;
+}
+
+h6 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.411111;
+    color: #ffffff;
+}
+
+.btn,
+button {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    /* identical to box height */
+    text-align: center;
+    padding: 8px 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 0;
+    max-width: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in;
+    z-index: 1;
+    overflow: hidden;
+    letter-spacing: 0;
+    min-width: 120px;
+}
+
+.btn:hover,
+button:hover {
+    background-color: #acacac;
+}
+
+body {
+    padding: 25px;
+    background-color: #333333;
+}
+
+.main-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.mb-20 {
+    margin-bottom: 10px;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.tag-change {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+}
+
+.tag-dropdown {
+	height: 40px;
+	min-width: 220px;
+	background-color: #000000;
+	border-radius: 3px;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	padding: 8px 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+    min-height: 400px;
+    text-align: center;
+    color: #fff;
+    background-color: #fff;
+  }
+  /* .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-size: cover;
+    background-position: 0 0;
+    transition: transform calc(var(--d) * 1.5) var(--e);
+    pointer-events: none;
+  }
+  .card:after {
+    opacity: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
+    transition: transform calc(var(--d) * 2) var(--e);
+  }
+  .card:hover:after {
+    opacity: 1;
+    transition: opacity calc(var(--d) * 1.5) var(--e);
+  }
+  .card:nth-child(1):before {
+    background-image: url(https://picsum.photos/200/300.jpg);
+  }
+  .card:nth-child(2):before {
+    background-image: url(https://picsum.photos/200/300.jpg);
+  }
+  .card:nth-child(3):before {
+    background-image: url(https://picsum.photos/200/300.jpg);
+  }
+  .card:nth-child(4):before {
+    background-image: url(https://picsum.photos/200/300.jpg);
+  } */
+  
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    transition: transform var(--d) var(--e);
+    z-index: 1;
+  }
+  .content > * + * {
+    margin-top: 1rem;
+  }
+  
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 35px;
+  }
+  
+  .copy {
+    font-size: 15px;
+    font-style: italic;
+    line-height: 25px;
+  }
+  
+  .btn {
+    cursor: pointer;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    border: none;
+  }
+  .btn:hover {
+    background-color: #0d0d0d;
+  }
+  @media (hover: hover) and (min-width: 600px) {
+    .card:after {
+      transform: translateY(0);
+    }
+    .content {
+      transform: translateY(calc(100% - 4.5rem));
+    }
+    .content > *:not(.title) {
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+    }
+    .card:hover,
+    .card:focus-within {
+        align-items: center;
+      }
+    .card:hover:before,
+    .card:focus-within:before {
+        transform: translateY(-4%);
+      }
+    .card:hover:after,
+    .card:focus-within:after {
+        transform: translateY(-50%);
+      }
+    .card:hover .content,
+    .card:focus-within .content {
+        transform: translateY(0);
+      }
+    .card:hover .content > *:not(.title),
+    .card:focus-within .content > *:not(.title) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: calc(var(--d) / 8);
+      }
+  
+    .card:focus-within:before, .card:focus-within:after,
+    .card:focus-within .content,
+    .card:focus-within .content > *:not(.title) {
+        transition-duration: 0s;
+      }
+  }
+
+
+
+
+  /**** Owl Item Below btns ****/
+.owl-carousel h3 {
+    font-size: 25px;
+    transition: 1s all;
+    font-weight: 600;
+    transform: translateY(20px);
+  }
+  .owl-carousel p {
+    margin-top: 6px;
+    transition: 1s all;
+    transform: translateY(20px);
+  }
+  .owl-carousel a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 15px;
+    margin-top: 15px;
+    transition: 1.5s all;
+    display: none;
+    z-index: 1222;
+  }
+  .owl-carousel .item:hover h3 {
+    transform: translateY(0px);
+  }
+  .owl-carousel .item:hover p {
+    transform: translateY(0px);
+  }
+  .owl-carousel .item:hover a {
+    display: block;
+  }
+
+
+
+  /*Svg Border*/
+.svgwp {
+  width: 130px;
+  position: relative;
+  height: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+.svgwp .svg-line {
+  stroke-width: 6px;
+  fill: transparent;
+  stroke: #fff;
+  stroke-dasharray: 80 280;
+  stroke-dashoffset: -205;
+  transition: all 1s ease;
+}
+.svgwp .text {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  transition: color 0.5s ease-in-out;
+}
+.svgwp:hover .svg-line {
+  stroke-dasharray: 50 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke: #D46550;
+}
+.svgwp:hover .text {
+  color: #D46550;
+}
